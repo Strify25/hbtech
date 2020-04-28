@@ -2,9 +2,8 @@
 @import "variables";
 
 // Подключение нужных SCSS исходников Bootstrap 4
-@import "../../../node_modules/uikit/src/scss/variables-theme";
-@import "../../../node_modules/uikit/src/scss/mixins-theme";
-@import "../../../node_modules/uikit/src/scss/uikit-theme";
+@import "uikit.min";
+@import "uikit-rtl.min";
 
 // Подключение своих SCSS файлов
 @import "my";
