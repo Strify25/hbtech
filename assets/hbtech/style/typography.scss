@@ -1,0 +1,200 @@
+body {
+	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	overflow-x: hidden;
+	color: #363636;
+}
+
+.h-100 {
+	height: 100%;
+}
+
+.w-100 {
+	width: 100%;
+}
+
+.flex-none {
+	flex: none;
+}
+
+h1, .h1 {
+	@include headers();
+	font-size: 2.375em;
+
+	&.innerH1 {
+		margin-top: 0;
+		margin-bottom: 30px;
+	}
+}
+
+h2, .h2 {
+	@include headers();
+	font-size: 1.9375em;
+}
+
+h3, .h3 {
+	@include headers();
+	font-size: 1.5625em;
+}
+
+h4, .h4 {
+	@include headers();
+	font-size: 1.25em;
+}
+
+h5, .h5 {
+	@include headers();
+	font-size: 1.1em;
+}
+
+h6, .h6 {
+	@include headers();
+	font-size: 1em;
+}
+
+
+
+ul, ol {
+	margin: 0 0 30px 0;
+	padding: 0;
+
+	> li {
+		position: relative;
+		margin: 0 0 10px 0;
+		padding: 0 0 0 30px;
+		list-style: none;
+
+		&:before {
+			content: " ";
+			display: inline-block;
+			vertical-align: top;
+			position: absolute;
+			top: auto;
+			right: auto;
+			bottom: auto;
+			left: 0;
+			bottom: auto;
+		}
+	}
+}
+
+ol {
+	counter-reset: li;
+
+	> li {
+		&:before {
+			content: counter(li) ". " !important;
+			counter-increment: li;
+		}
+	}
+}
+
+ul {
+	> li {
+		&:before {
+			content: "";
+			width: 3px;
+			height: 3px;
+			border-radius: 50%;
+			top: 10px;
+		}
+	}
+}
+
+@each $indent in $indents {
+	$indent-name: $indent;
+	$indent-value: $indent;
+
+	@if ($indent-name == 0) {
+		$indent-name: 'none';
+	} @else {
+		$indent-value: #{$indent-value}px;
+	}
+
+	.p-#{$indent-name},
+	.pt-#{$indent-name},
+	.pv-#{$indent-name} {
+		padding-top: #{$indent-value} !important;
+	}
+
+	.p-#{$indent-name},
+	.pb-#{$indent-name},
+	.pv-#{$indent-name} {
+		padding-bottom: #{$indent-value} !important;
+	}
+
+	.p-#{$indent-name},
+	.pl-#{$indent-name},
+	.ph-#{$indent-name} {
+		padding-left: #{$indent-value} !important;
+	}
+
+	.p-#{$indent-name},
+	.pr-#{$indent-name},
+	.ph-#{$indent-name} {
+		padding-right: #{$indent-value} !important;
+	}
+
+	.m-#{$indent-name},
+	.mt-#{$indent-name},
+	.mv-#{$indent-name} {
+		margin-top: #{$indent-value} !important;
+	}
+
+	.m-#{$indent-name},
+	.mb-#{$indent-name},
+	.mv-#{$indent-name} {
+		margin-bottom: #{$indent-value} !important;
+	}
+
+	.m-#{$indent-name},
+	.ml-#{$indent-name},
+	.mh-#{$indent-name} {
+		margin-left: #{$indent-value} !important;
+	}
+
+	.m-#{$indent-name},
+	.mr-#{$indent-name},
+	.mh-#{$indent-name} {
+		margin-right: #{$indent-value} !important;
+	}
+}
+
+.position-relative {
+	position: relative;
+}
+
+.inputGroup {
+	position: relative;
+	margin-bottom: 30px;
+
+	.inputName {
+		font-size: inherit;
+		font-weight: normal;
+		position: absolute;
+		pointer-events: none;
+		left: 20px;
+		top: 16px;
+		transition: all 0.2s ease;
+
+		.requared {
+			color: #f00;
+		}
+	}
+	&.active, &.completed {
+		.inputName {
+			top: -25px;
+			left: 0;
+			font-size: 14px;
+		}
+	}
+	div.error {
+		font-size: 13px;
+		color: red;
+	}
+}
+
+.img-fluid {
+	max-width: 100%;
+}

@@ -1,9 +1,12 @@
 // Переопределение дефолтных значений переменных Bootstrap 4 и определение своих
-@import "variables";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css";
+@import "https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Roboto+Condensed&display=swap";
 
 // Подключение нужных SCSS исходников Bootstrap 4
 @import "uikit.min";
 @import "uikit-rtl.min";
+@import "variables";
+@import "typography";
 
 // Подключение своих SCSS файлов
 @import "my";
