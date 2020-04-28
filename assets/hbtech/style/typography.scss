@@ -198,3 +198,44 @@ ul {
 .img-fluid {
 	max-width: 100%;
 }
+
+.btn {
+	font-family: 'Roboto Condensed';
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 0.5px;
+	text-align: center;
+	padding: 10px 35px;
+	border-radius: 2px;
+	border: 1px solid $yellow;
+	transition: all .3s ease;
+	display: inline-block;
+	
+	&.yellowBtn {
+		background-color: $yellow;
+		color: #fff;
+
+		&:hover {
+			border-color: $yellowHover;
+			background-color: $yellowHover;
+			text-decoration: none;
+		}
+	}
+	&.transBtn {
+		background-color: transparent;
+		color: $yellow;
+
+		&:hover {
+			border-color: $yellowHover;
+			background-color: $yellowHover;
+			text-decoration: none;
+			color: #fff;
+		}
+	}
+	&.fastCalc {
+		background-image: url("../img/fastCalc.svg");
+		background-repeat: no-repeat;
+		background-position: 10px center;
+		padding: 15px 10px 15px 50px;
+	}
+}
