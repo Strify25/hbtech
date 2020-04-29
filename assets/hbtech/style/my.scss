@@ -333,3 +333,48 @@ header {
 		}
 	}
 }
+
+.newSpecialTitle {
+	font-size: 18px;
+	text-transform: uppercase;
+	font-family: "Roboto Condensed",sans-serif;
+}
+
+.projectItem {
+	.image {
+		position: relative;
+		padding-top: 73%;
+		overflow: hidden;
+	}
+	.imageItems {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		display: flex;
+	}
+	.imageitem {
+		width: 20%;
+		height: 100%;
+
+		&:hover {
+			img {
+				display: block;
+			}
+		}
+		img {
+			display: none;
+		}
+		&:first-child {
+			img {
+				display: block;
+			}
+		}
+		&:not(:hover) {
+			img {
+				display: none;
+			}
+		}
+	}
+}
