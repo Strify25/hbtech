@@ -341,39 +341,43 @@ header {
 }
 
 .projectItem {
-	.image {
-		position: relative;
-		padding-top: 73%;
-		overflow: hidden;
-	}
-	.imageItems {
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		display: flex;
-	}
-	.imageitem {
-		width: 20%;
-		height: 100%;
 
-		&:hover {
-			img {
+	.imageDots {
+		margin-left: 0;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		justify-content: space-around;
+
+		li {
+			width: 18%;
+
+			a {
+				border-radius: 0;
 				display: block;
+				width: 100%;
+				border: none;
+				height: 100%;
+				position: relative;
+
+				&:after {
+					content: "";
+					width: 100%;
+					height: 3px;
+					display: block;
+					background: rgba(255, 255, 255, 0.8);
+					position: absolute;
+					bottom: 5px;
+				}
 			}
-		}
-		img {
-			display: none;
-		}
-		&:first-child {
-			img {
-				display: block;
-			}
-		}
-		&:not(:hover) {
-			img {
-				display: none;
+			&.uk-active {
+				a {
+					background-color: transparent;
+					&:after {
+						background: $yellow;
+					}
+				}
 			}
 		}
 	}

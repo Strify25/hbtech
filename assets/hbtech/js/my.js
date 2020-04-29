@@ -7,4 +7,13 @@ jQuery(document).ready(function($) {
 		
 		$('.searchWrap').toggleClass('active').find('input').focus();
 	});
+
+
+
+$(".imageDots a").hover(function() {
+	var parent = $(this).parents(".uk-slideshow");
+	var index = $(this).parent().attr("uk-slideshow-item");
+	UIkit.slideshow(parent).show(index);
+});
+	
 });
