@@ -338,6 +338,7 @@ header {
 	font-size: 18px;
 	text-transform: uppercase;
 	font-family: "Roboto Condensed",sans-serif;
+	margin-bottom: 10px;
 }
 
 .projectItem {
@@ -360,6 +361,7 @@ header {
 				border: none;
 				height: 100%;
 				position: relative;
+				background-color: transparent;
 
 				&:after {
 					content: "";

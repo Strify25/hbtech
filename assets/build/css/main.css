@@ -7947,7 +7947,8 @@ header {
 .newSpecialTitle {
   font-size: 18px;
   text-transform: uppercase;
-  font-family: "Roboto Condensed",sans-serif; }
+  font-family: "Roboto Condensed",sans-serif;
+  margin-bottom: 10px; }
 
 .projectItem .imageDots {
   margin-left: 0;
@@ -7965,7 +7966,8 @@ header {
       width: 100%;
       border: none;
       height: 100%;
-      position: relative; }
+      position: relative;
+      background-color: transparent; }
       .projectItem .imageDots li a:after {
         content: "";
         width: 100%;
