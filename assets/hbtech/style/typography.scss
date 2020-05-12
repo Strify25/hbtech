@@ -102,6 +102,20 @@ ul {
 	}
 }
 
+p {
+	a {
+		color: #363636;
+		border-bottom: 1px solid #363636;
+		transition: all .3s;
+
+		&:hover {
+			text-decoration: none;
+			color: #363636;
+			border-bottom-color: transparent;
+		}
+	}
+}
+
 @each $indent in $indents {
 	$indent-name: $indent;
 	$indent-value: $indent;
@@ -205,13 +219,14 @@ ul {
 	font-weight: bold;
 	letter-spacing: 0.5px;
 	text-align: center;
-	padding: 10px 35px;
+	padding: 0 35px;
 	border-radius: 2px;
 	border: 1px solid $yellow;
 	transition: all .3s ease;
 	display: inline-block;
 	cursor: pointer;
 	box-sizing: border-box;
+	line-height: 46px;
 	
 	&.yellowBtn {
 		background-color: $yellow;
@@ -240,5 +255,46 @@ ul {
 		background-position: 10px center;
 		padding: 15px 10px 15px 50px;
 		white-space: nowrap;
+	}
+}
+
+.withArrow {
+	font-family: 'Roboto Condensed';
+	text-transform: uppercase;
+	font-weight: bold;
+	padding-right: 25px;
+	transition: all .3s ease;
+	display: inline-block;
+	cursor: pointer;
+	box-sizing: border-box;
+	position: relative;
+	color: $yellow;
+
+	&:after {
+		content: "";
+		display: block;
+		background: url("../img/withArrow.svg") no-repeat center;
+		width: 19px;
+		height: 8px;
+		position: absolute;
+		right: 0;
+		top: calc(50% - 4px);
+		transition: all .3s;
+	}
+	span {
+		display: block;
+		border-bottom: 1px solid transparent;
+		transition: all .3s;
+	}
+	&:hover {
+		color: $yellow;
+		text-decoration: none;
+
+		&:after {
+			right: -10px;
+		}
+		span {
+			border-bottom-color: $yellow;
+		}
 	}
 }

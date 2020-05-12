@@ -6786,6 +6786,15 @@ ul > li:before {
   border-radius: 50%;
   top: 10px; }
 
+p a {
+  color: #363636;
+  border-bottom: 1px solid #363636;
+  transition: all .3s; }
+  p a:hover {
+    text-decoration: none;
+    color: #363636;
+    border-bottom-color: transparent; }
+
 .p-none,
 .pt-none,
 .pv-none {
@@ -7659,13 +7668,14 @@ ul > li:before {
   font-weight: bold;
   letter-spacing: 0.5px;
   text-align: center;
-  padding: 10px 35px;
+  padding: 0 35px;
   border-radius: 2px;
   border: 1px solid #FCB317;
   transition: all .3s ease;
   display: inline-block;
   cursor: pointer;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  line-height: 46px; }
   .btn.yellowBtn {
     background-color: #FCB317;
     color: #fff; }
@@ -7687,6 +7697,39 @@ ul > li:before {
     background-position: 10px center;
     padding: 15px 10px 15px 50px;
     white-space: nowrap; }
+
+.withArrow {
+  font-family: 'Roboto Condensed';
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-right: 25px;
+  transition: all .3s ease;
+  display: inline-block;
+  cursor: pointer;
+  box-sizing: border-box;
+  position: relative;
+  color: #FCB317; }
+  .withArrow:after {
+    content: "";
+    display: block;
+    background: url("../img/withArrow.svg") no-repeat center;
+    width: 19px;
+    height: 8px;
+    position: absolute;
+    right: 0;
+    top: calc(50% - 4px);
+    transition: all .3s; }
+  .withArrow span {
+    display: block;
+    border-bottom: 1px solid transparent;
+    transition: all .3s; }
+  .withArrow:hover {
+    color: #FCB317;
+    text-decoration: none; }
+    .withArrow:hover:after {
+      right: -10px; }
+    .withArrow:hover span {
+      border-bottom-color: #FCB317; }
 
 header {
   background: #414C5A;
@@ -7910,11 +7953,19 @@ header {
   .uk-slideshow ul li:before {
     display: none; }
 
+.mainSlider [class*=uk-height] {
+  box-sizing: content-box; }
+
+.mainSlider picture img {
+  width: 100%; }
+
 .mainSliderThumbs {
   position: absolute;
   width: 100%;
   bottom: 0;
   box-sizing: border-box; }
+  .mainSliderThumbs .uk-thumbnav {
+    margin-left: 0; }
   .mainSliderThumbs li {
     box-sizing: border-box;
     -ms-flex: 0 0 25%;
@@ -7975,8 +8026,155 @@ header {
         display: block;
         background: rgba(255, 255, 255, 0.8);
         position: absolute;
-        bottom: 5px; }
+        bottom: 5px;
+        opacity: 0;
+        transition: all .3s; }
     .projectItem .imageDots li.uk-active a {
       background-color: transparent; }
       .projectItem .imageDots li.uk-active a:after {
         background: #FCB317; }
+
+.projectItem .titleWrap {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin: 15px 0 10px; }
+  .projectItem .titleWrap .title {
+    color: #000;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed';
+    font-weight: bold;
+    transition: all .3s; }
+    .projectItem .titleWrap .title:hover {
+      text-decoration: none;
+      color: #FCB317; }
+
+.projectItem .plans a {
+  color: transparent; }
+  .projectItem .plans a:hover path {
+    stroke: #FCB317; }
+
+.projectItem .propsWrap {
+  font-size: 13px; }
+  .projectItem .propsWrap .prop {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center;
+    margin-top: -1px;
+    border-top: 1px solid #F5F5F5;
+    border-bottom: 1px solid #F5F5F5;
+    padding: 5px 0; }
+
+.projectItem .priceBlock {
+  font-size: 13px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 10px 0 15px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #F5F5F5; }
+  .projectItem .priceBlock div {
+    -ms-flex: 0 0 50%;
+        flex: 0 0 50%; }
+
+.projectItem .likes {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center; }
+  .projectItem .likes button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none; }
+    .projectItem .likes button.minus {
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg);
+      margin-top: 12px; }
+    .projectItem .likes button.active path {
+      fill: #FCB317; }
+    .projectItem .likes button:not(.desabled):hover path {
+      fill: #FCB317; }
+  .projectItem .likes .counter {
+    color: #BCBCBC;
+    font-size: 13px;
+    margin-top: 9px; }
+
+.projectItem .btns {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+
+.projectItem:hover .imageDots li a:after {
+  opacity: 1; }
+
+.uk-tooltip {
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.03);
+  background: #FFFFFF;
+  border: 1px solid #E4E4E4;
+  font-size: 10px;
+  color: #363636; }
+
+.allProjects {
+  margin-top: 40px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+  .allProjects div {
+    padding: 0 15px; }
+
+.companyInNumbers {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center; }
+  .companyInNumbers .img {
+    margin-right: 40px;
+    -ms-flex: none;
+        flex: none; }
+
+.numberWrap {
+  font-weight: bold;
+  font-family: 'Roboto Condensed'; }
+  .numberWrap .number {
+    color: #FCB317;
+    font-size: 36px;
+    line-height: 38px; }
+  .numberWrap p {
+    margin: 0; }
+
+.reliabilityWrap {
+  text-align: center;
+  display: block;
+  border: 1px solid #DDDDDD;
+  padding: 35px 15px;
+  font-weight: bold;
+  color: #000;
+  transition: all .3s; }
+  .reliabilityWrap .img {
+    height: 48px; }
+  .reliabilityWrap:hover {
+    border-color: #FCB317;
+    color: #000;
+    text-decoration: none; }
+    .reliabilityWrap:hover .withArrow:after {
+      right: -10px; }
