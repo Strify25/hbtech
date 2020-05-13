@@ -10872,8 +10872,6 @@ if ( typeof noGlobal === "undefined" ) {
 return jQuery;
 } );
 
-// Импортируем необходимые js-файлы Bootstrap 4
-
 // Импортируем другие js-файлы
 /*! UIkit 3.4.2 | https://www.getuikit.com | (c) 2014 - 2020 YOOtheme | MIT License */
 
@@ -11070,5 +11068,9 @@ jQuery(document).ready(function($) {
 		UIkit.slideshow(parent).show(index);
 	});
 
+	if ($(window).width() > 639) {
+		UIkit.slider("#sertificatesSlider", {draggable:false});
+		UIkit.slider("#clientsSlider", {draggable:false});
+	}
 	
 });

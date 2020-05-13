@@ -15,5 +15,9 @@ jQuery(document).ready(function($) {
 		UIkit.slideshow(parent).show(index);
 	});
 
+	if ($(window).width() > 639) {
+		UIkit.slider("#sertificatesSlider", {draggable:false});
+		UIkit.slider("#clientsSlider", {draggable:false});
+	}
 	
 });
