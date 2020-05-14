@@ -5,4 +5,5 @@
 //= uikit.min.js
 //= uikit-icons.min.js
 //= jquery.inputmask.min.js
+//= nouislider.min.js
 //= my.js

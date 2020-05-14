@@ -217,6 +217,24 @@ p {
 	}
 }
 
+.uk-checkbox {
+	border-radius: 2px;
+	border-color: $grayMiddle;
+
+	&:focus {
+		border-color: $grayMiddle;
+	}
+	&:checked, &:indeterminate {
+		background-color: $yellow;
+		border-color: $yellow;
+
+		&:focus {
+			background-color: $yellow;
+			border-color: $yellow;
+		}
+	}
+}
+
 .img-fluid {
 	max-width: 100%;
 }
@@ -305,5 +323,22 @@ p {
 		span {
 			border-bottom-color: $yellow;
 		}
+	}
+}
+
+[type="reset"] {
+	border: none;
+	border-bottom: 1px solid transparent;
+	background-color: transparent;
+	font-size: 14px;
+	font-family: "Open Sans", sans-serif;
+	color: $gray;
+	outline: none;
+	cursor: pointer;
+	padding: 0;
+	transition: all .3s;
+
+	&:hover {
+		border-bottom-color: $gray;
 	}
 }
