@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<header>
+<header class="desktopHeader">
 	<div class="uk-container uk-container-xlarge">
 		<div class="uk-flex-middle uk-grid-collapse" data-uk-grid>
 			<div class="uk-width-2-3 uk-flex uk-flex-middle">
@@ -33,7 +33,7 @@
 					</a>
 				</div>
 			</div>
-			<div class="uk-width-1-3 uk-flex uk-flex-right">
+			<div class="uk-width-1-3 uk-flex uk-flex-right headerRight">
 				<div class="socials">
 					<div class="icons">
 						<a href="" class="uk-icon-link" data-uk-icon="vk"></a>
@@ -43,12 +43,12 @@
 					</div>
 					<div class="iconsText">
 						<a href="">
-							<span data-uk-icon="whatsapp"></span>WhatsApp	
+							<span data-uk-icon="whatsapp"></span><span class="text">WhatsApp</span>	
 						</a>
 					</div>
 					<div class="iconsText mb-0">
 						<a href="mailto:mail@hbtech.ru">
-							<span data-uk-icon="mail"></span>mail@hbtech.ru	
+							<span data-uk-icon="mail"></span><span class="text">mail@hbtech.ru</span>	
 						</a>
 					</div>
 				</div>
@@ -61,7 +61,9 @@
 	</div>
 </header>
 
-<nav class="position-relative mainNav" data-uk-sticky="show-on-up: true; animation: uk-animation-slide-top;">
+<div class="mobileHeaderWrap"></div>
+
+<nav class="position-relative mainNav" data-uk-sticky="show-on-up: true; animation: uk-animation-slide-top;media: 1050;">
 	<div class="uk-container uk-container-xlarge h-100">
 		<div class="uk-flex-between uk-flex-middle position-relative h-100" data-uk-grid>
 			<div class="uk-flex uk-flex-middle">
@@ -252,7 +254,7 @@
 			</div>
 			<div>
 				<button class="openSearch" data-uk-icon="search"></button>
-				<a href="#callMe" class="btn yellowBtn ml-20 menuCallMe" data-uk-toggle>Заказать звонок</a>
+				<a href="#callMe" class="btn yellowBtn ml-20 menuCallMe" data-uk-toggle><span class="text">Заказать звонок</span><span data-uk-icon="receiver"></span></a>
 			</div>
 			<div class="searchWrap uk-height-1-1">
 				<form action="#">
@@ -263,7 +265,8 @@
 		</div>
 	</div>
 </nav>
-<div class="uk-position-relative" data-uk-slideshow="animation: pull;ratio: 1920:577;autoplay: true;autoplay-interval: 3000">
+
+<div class="uk-position-relative desktopSlider" data-uk-slideshow="animation: pull;ratio: 1920:577;autoplay: true;autoplay-interval: 3000">
 
     <ul class="uk-slideshow-items mainSlider">
         <li data-uk-height-match>
@@ -274,7 +277,7 @@
         	<div class="uk-position-cover uk-height-1-1" uk-slideshow-parallax="x: 100,-100">
 	        	<div class="uk-container uk-container-xlarge uk-height-1-1">
 					<div class="uk-position-relative uk-height-1-1">
-						<a href=""><img src="#" data-src="img/textBan2.svg" alt="" class="uk-position-center-left" data-uk-img=""></a>
+						<a href=""><img src="#" data-src="img/textBan2.svg" alt="" class="uk-position-center-left slideText" data-uk-img=""></a>
 					</div>
 	        	</div>
         	</div>
@@ -287,7 +290,7 @@
         	<div class="uk-position-cover uk-height-1-1" uk-slideshow-parallax="x: 100,-100">
 	        	<div class="uk-container uk-container-xlarge uk-height-1-1">
 					<div class="uk-position-relative uk-height-1-1">
-						<a href=""><img src="#" data-src="img/textBan3.svg" alt="" class="uk-position-center-left" data-uk-img=""></a>
+						<a href=""><img src="#" data-src="img/textBan3.svg" alt="" class="uk-position-center-left slideText" data-uk-img=""></a>
 					</div>
 	        	</div>
         	</div>
@@ -300,7 +303,7 @@
         	<div class="uk-position-cover uk-height-1-1" uk-slideshow-parallax="x: 100,-100">
 	        	<div class="uk-container uk-container-xlarge uk-height-1-1">
 					<div class="uk-position-relative uk-height-1-1">
-						<a href=""><img src="#" data-src="img/textBan1.svg" alt="" class="uk-position-center-left" data-uk-img=""></a>
+						<a href=""><img src="#" data-src="img/textBan1.svg" alt="" class="uk-position-center-left slideText" data-uk-img=""></a>
 					</div>
 	        	</div>
         	</div>
@@ -313,14 +316,14 @@
         	<div class="uk-position-cover uk-height-1-1" uk-slideshow-parallax="x: 100,-100">
 	        	<div class="uk-container uk-container-xlarge uk-height-1-1">
 					<div class="uk-position-relative uk-height-1-1">
-						<a href=""><img src="#" data-src="img/textBan4.svg" alt="" class="uk-position-center-left" data-uk-img=""></a>
+						<a href=""><img src="#" data-src="img/textBan4.svg" alt="" class="uk-position-center-left slideText" data-uk-img=""></a>
 					</div>
 	        	</div>
         	</div>
         </li>
     </ul>
 
-    <div class="mainSliderThumbs">
+    <div class="mainSliderThumbs uk-visible@l">
     	<div class="uk-container uk-container-xlarge">
 	        <ul class="uk-thumbnav">
 	            <li data-uk-slideshow-item="0"><a href="#">Скидка 50% на проектирование</a></li>
@@ -330,12 +333,77 @@
 	        </ul>
     	</div>
     </div>
+	<div class="mainSliderDots uk-hidden@l">
+		<ul class="uk-slideshow-nav uk-dotnav"></ul>
+	</div>
+
+</div>
+
+<div class="uk-position-relative mobileSlider" data-uk-slideshow="animation: pull;ratio: 375:300;autoplay: true;autoplay-interval: 3000">
+
+    <ul class="uk-slideshow-items mainSlider">
+        <li data-uk-height-match>
+        	<picture>
+        	    <source srcset="img/ban2.webp" type="image/webp">
+        	    <img src="#" data-src="img/ban2.jpg" alt="" data-uk-img>
+        	</picture>
+        	<div class="uk-position-cover uk-height-1-1" uk-slideshow-parallax="x: 100,-100">
+	        	<div class="uk-container uk-container-xlarge uk-height-1-1">
+					<div class="uk-position-relative uk-height-1-1">
+						<a href=""><img src="#" data-src="img/textBan2Mobile.svg" alt="" class="uk-position-center-left slideText" data-uk-img=""></a>
+					</div>
+	        	</div>
+        	</div>
+        </li>
+        <li data-uk-height-match>
+        	<picture>
+        	    <source srcset="img/ban3.webp" type="image/webp">
+        	    <img src="#" data-src="img/ban3.jpg" alt="" data-uk-img>
+        	</picture>
+        	<div class="uk-position-cover uk-height-1-1" uk-slideshow-parallax="x: 100,-100">
+	        	<div class="uk-container uk-container-xlarge uk-height-1-1">
+					<div class="uk-position-relative uk-height-1-1">
+						<a href=""><img src="#" data-src="img/textBan3.svg" alt="" class="uk-position-center-left slideText" data-uk-img=""></a>
+					</div>
+	        	</div>
+        	</div>
+        </li>
+        <li data-uk-height-match>
+        	<picture>
+        	    <source srcset="img/ban1.webp" type="image/webp">
+        	    <img src="#" data-src="img/ban1.jpg" alt="" data-uk-img>
+        	</picture>
+        	<div class="uk-position-cover uk-height-1-1" uk-slideshow-parallax="x: 100,-100">
+	        	<div class="uk-container uk-container-xlarge uk-height-1-1">
+					<div class="uk-position-relative uk-height-1-1">
+						<a href=""><img src="#" data-src="img/textBan1.svg" alt="" class="uk-position-center-left slideText" data-uk-img=""></a>
+					</div>
+	        	</div>
+        	</div>
+        </li>
+        <li data-uk-height-match>
+        	<picture>
+        	    <source srcset="img/ban4.webp" type="image/webp">
+        	    <img src="#" data-src="img/ban4.jpg" alt="" data-uk-img>
+        	</picture>
+        	<div class="uk-position-cover uk-height-1-1" uk-slideshow-parallax="x: 100,-100">
+	        	<div class="uk-container uk-container-xlarge uk-height-1-1">
+					<div class="uk-position-relative uk-height-1-1">
+						<a href=""><img src="#" data-src="img/textBan4.svg" alt="" class="uk-position-center-left slideText" data-uk-img=""></a>
+					</div>
+	        	</div>
+        	</div>
+        </li>
+    </ul>
+	<div class="mainSliderDots uk-hidden@l">
+		<ul class="uk-slideshow-nav uk-dotnav"></ul>
+	</div>
 
 </div>
 
 <div class="uk-container uk-container-xlarge mt-60">
 	<div data-uk-grid>
-		<div class="uk-width-1-4@m">
+		<div class="uk-width-1-4@m sidebar">
 			<div class="filterTitle">Фильтр проектов</div>
 			<div class="filterLinks">
 				<a href="">Популярные</a>
@@ -355,7 +423,7 @@
 							<span>м<sup>2</sup></span>
 						</div>
 					</div>
-					<div id="html5"></div>
+					<div id="square"></div>
 				</div>
 				<div class="filterBlock">
 					<div class="filterName">Габариты дома</div>
@@ -502,53 +570,53 @@
 			</div>
 
 			<a href="" class="sidebarSertificate">
-				<div class="uk-child-width-1-2 uk-flex-middle" data-uk-grid>
-					<div>
+				<div class="uk-child-width-1-2@l uk-flex-middle" data-uk-grid>
+					<div class="uk-text-center uk-text-left@l">
 						Мы являемся сертифицированными специалистами&nbsp;YTONG
 					</div>
-					<div>
+					<div class="uk-text-right@l uk-text-center">
 						<img src="#" data-src="img/ytong.png" alt="" data-uk-img="">
 					</div>
 				</div>
 			</a>
 
 			<a href="" class="sidebarSertificate">
-				<div class="uk-child-width-1-2 uk-flex-middle" data-uk-grid>
-					<div>
+				<div class="uk-child-width-1-2@l uk-flex-middle" data-uk-grid>
+					<div class="uk-text-center uk-text-left@l">
 						Мы являемся сертифицированными специалистами&nbsp;УНИКМА
 					</div>
-					<div>
+					<div class="uk-text-right@l uk-text-center">
 						<img src="#" data-src="img/unikma.png" alt="" data-uk-img="">
 					</div>
 				</div>
 			</a>
 
 			<a href="" class="sidebarSertificate">
-				<div class="uk-child-width-1-2 uk-flex-middle" data-uk-grid>
-					<div>
+				<div class="uk-child-width-1-2@l uk-flex-middle" data-uk-grid>
+					<div class="uk-text-center uk-text-left@l">
 						Мы являемся сертифицированными специалистами&nbsp;Bonolit
 					</div>
-					<div>
+					<div class="uk-text-right@l uk-text-center">
 						<img src="#" data-src="img/bonolit.png" alt="" data-uk-img="">
 					</div>
 				</div>
 			</a>
 
 			<a href="" class="sidebarSertificate">
-				<div class="uk-child-width-1-2 uk-flex-middle" data-uk-grid>
-					<div>
+				<div class="uk-child-width-1-2@l uk-flex-middle" data-uk-grid>
+					<div class="uk-text-center uk-text-left@l">
 						Мы являемся сертифицированными специалистами&nbsp;BRAAS
 					</div>
-					<div>
+					<div class="uk-text-right@l uk-text-center">
 						<img src="#" data-src="img/braas.png" alt="" data-uk-img="">
 					</div>
 				</div>
 			</a>
 		</div>
-		<div class="uk-width-3-4@m">
+		<div class="uk-width-expand">
 			<h1 class="mt-0">Строительство домов из блоков</h1>
 			<div class="newSpecialTitle">Новые спецпредложения</div>
-			<div class="uk-child-width-1-3@m" data-uk-grid>
+			<div class="uk-child-width-1-3@m pojectsOverflow" data-uk-grid>
 				<div>
 					<div class="projectItem">
 						<div class="image">
@@ -827,10 +895,10 @@
 				</div>
 			</div>
 			<div class="allProjects">
-				<div>
+				<div class="mb-15">
 					<a href="" class="btn yellowBtn">Все спецпредложения</a>
 				</div>
-				<div>
+				<div class="mb-15">
 					<a href="" class="btn transBtn">Смотреть все проекты</a>
 				</div>
 			</div>
@@ -845,20 +913,20 @@
 					<a href="" class="withArrow"><span>Отправить задание</span></a>
 				</div>
 			</div>
-			<div class="uk-child-width-1-3@s" data-uk-grid>
-				<div class="uk-flex uk-flex-center">
+			<div class="uk-child-width-1-3@s uk-child-width-1-2" data-uk-grid>
+				<div class="uk-flex@s uk-flex-center">
 					<div class="numberWrap">
 						<div class="number">30&nbsp;000+</div>
 						<p>кв.м <br>построено</p>
 					</div>
 				</div>
-				<div class="uk-flex uk-flex-center">
+				<div class="uk-flex@s uk-flex-center">
 					<div class="numberWrap">
 						<div class="number">800+</div>
 						<p>архитектурных <br>решений</p>
 					</div>
 				</div>
-				<div class="uk-flex uk-flex-center">
+				<div class="uk-flex@s uk-flex-center">
 					<div class="numberWrap">
 						<div class="number">5&nbsp;000+</div>
 						<p>семей получили <br>бесплатные расчеты</p>
@@ -867,7 +935,7 @@
 			</div>
 			<h2>Популярные проекты домов</h2>
 			<div class="mb-100">
-				<div class="uk-child-width-1-3@m" data-uk-grid>
+				<div class="uk-child-width-1-3@m uk-child-width-1-2@s" data-uk-grid>
 					<div>
 						<div class="projectItem">
 							<div class="image">
@@ -1699,7 +1767,7 @@
 				</div>
 			</div>
 			<h2>Надежность</h2>
-			<div class="uk-child-width-1-4@m uk-child-width-1-2@s mb-100" data-uk-grid>
+			<div class="uk-child-width-1-4@l uk-child-width-1-2@s mb-100" data-uk-grid>
 				<div>
 					<a href="#" class="reliabilityWrap">
 						<div class="img">
@@ -1743,7 +1811,7 @@
 				<a href="#" class="btn transBtn ph-60">Открыть всю карту</a>
 			</div>
 			<h2>Производим все виды работ</h2>
-			<div class="uk-child-width-1-3@m uk-child-width-1-2 mb-100" data-uk-grid>
+			<div class="uk-child-width-1-3@m uk-child-width-1-2 mb-100 kindOfWorkWrap" data-uk-grid>
 				<div>
 					<a href="" class="kindOfWork">
 						<img src="#" data-src="img/proektirovanie.jpg" alt="" data-uk-img="">
@@ -1804,7 +1872,7 @@
 				</div>
 			</div>
 			<h2>Почему выбирают нас</h2>
-			<div class="uk-child-width-1-4@m uk-child-width-1-2" data-uk-grid uk-height-match="target: .img">
+			<div class="uk-child-width-1-4@l uk-child-width-1-3@m uk-child-width-1-2 uk-flex-around whyWrap" data-uk-grid uk-height-match="target: .img">
 				<div>
 					<div class="img">
 						<img src="img/why/1.svg" alt="" class="uk-preserve" data-uk-svg="">
@@ -1891,7 +1959,7 @@
 			    <div class="uk-position-relative">
 
 			        <div class="uk-slider-container uk-light">
-			            <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@s uk-child-width-1-4@m uk-grid" data-uk-lightbox>
+			            <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@l uk-grid" data-uk-lightbox>
 			                <li>
 			                    <a href="http://hbtech.ru/upload/iblock/877/8774517fd897be2a05011885d60a3afd.jpg"><img src="http://hbtech.ru/upload/iblock/877/8774517fd897be2a05011885d60a3afd.jpg" alt="" data-uk-img></a>
 			                </li>
@@ -1910,7 +1978,7 @@
 			            </ul>
 			        </div>
 
-			        <div class="uk-visible@s carouselArrows">
+			        <div class="uk-visible@m carouselArrows">
 			            <a class="uk-position-center-left-out uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
 			            <a class="uk-position-center-right-out uk-position-small" href="#" uk-slidenav-next uk-slider-item="next"></a>
 			        </div>
@@ -1927,7 +1995,7 @@
 			    <div class="uk-position-relative">
 
 			        <div class="uk-slider-container uk-light">
-			            <ul class="uk-slider-items uk-child-width-1-1 uk-child-width-1-3@s uk-child-width-1-4@m uk-grid">
+			            <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@l uk-grid">
 			                <li>
 			                    <a href=""><img src="http://hbtech.ru/upload/iblock/c3e/c3e539f340d1b8b40075596e73525c20.jpg" alt="" data-uk-img></a>
 			                </li>
@@ -1946,7 +2014,7 @@
 			            </ul>
 			        </div>
 
-			        <div class="uk-visible@s carouselArrows">
+			        <div class="uk-visible@m carouselArrows">
 			            <a class="uk-position-center-left-out uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
 			            <a class="uk-position-center-right-out uk-position-small" href="#" uk-slidenav-next uk-slider-item="next"></a>
 			        </div>
@@ -1976,7 +2044,7 @@
 <footer>
 	<div class="uk-container uk-container-xlarge">
 		<div data-uk-grid>
-			<div class="uk-width-1-4@m">
+			<div class="uk-width-1-4@m uk-width-1-2@s">
 				<p>© 2020 ООО "Технологии домостроения"</p>
 				<div class="footerSocials">
 					<div class="icons">
@@ -1991,9 +2059,17 @@
 					<a href="">Политика конфиденциальности</a>
 				</div>
 			</div>
+			<div class="uk-hidden@m uk-width-1-2@s">
+				<div class="h4"><a href="">О компании</a></div>
+				<ul class="footerMenu">
+					<li><a href="">Сертификаты</a></li>
+					<li><a href="">Отзывы</a></li>
+					<li><a href="">Реквизиты</a></li>
+				</ul>
+			</div>
 			<div class="uk-width-expand">
-				<div class="uk-child-width-1-3@m" data-uk-grid>
-					<div>
+				<div class="uk-child-width-1-3@m uk-child-width-1-2@s" data-uk-grid>
+					<div class="uk-visible@m">
 						<div class="h4"><a href="">О компании</a></div>
 						<ul class="footerMenu">
 							<li><a href="">Сертификаты</a></li>
@@ -2023,27 +2099,33 @@
 			</div>
 			<div class="uk-width-1-4@m">
 				<div class="h4">Контакты</div>
-				<div class="footerPhone">
-					<a href="tel:84952330070">8-495-233-00-70</a>
+				<div class="footerContacts">
+					<div>
+						<div class="footerPhone">
+							<a href="tel:84952330070">8-495-233-00-70</a>
+						</div>
+						<a href="" class="footerYellowLink">Обратный звонок</a>
+						<div class="iconsText mt-15">
+							<a href="">
+								<span data-uk-icon="whatsapp"></span><span class="footerYellowLink">WhatsApp</span>	
+							</a>
+						</div>
+						<div class="iconsText mt-15 mb-0">
+							<a href="mailto:mail@hbtech.ru">
+								<span data-uk-icon="mail"></span><span class="footerYellowLink">mail@hbtech.ru</span>	
+							</a>
+						</div>
+					</div>
+					<div>
+						<p>
+							<span class="uk-display-block uk-text-bold mb-5">Главный офис:</span>
+							г. Мытищи, Ярославское ш., стр.&nbsp;1, вл.&nbsp;1, оф.&nbsp;302
+							<span class="uk-display-block uk-text-bold mb-5 mt-10">Технический офис:</span>
+							Москва, Ярославское шоссе, 120&nbsp;б, стр.&nbsp;3
+						</p>
+						<a href="" class="footerYellowLink">Схема проезда</a>
+					</div>
 				</div>
-				<a href="" class="footerYellowLink">Обратный звонок</a>
-				<div class="iconsText mt-15">
-					<a href="">
-						<span data-uk-icon="whatsapp"></span><span class="footerYellowLink">WhatsApp</span>	
-					</a>
-				</div>
-				<div class="iconsText mt-15 mb-0">
-					<a href="mailto:mail@hbtech.ru">
-						<span data-uk-icon="mail"></span><span class="footerYellowLink">mail@hbtech.ru</span>	
-					</a>
-				</div>
-				<p>
-					<span class="uk-display-block uk-text-bold mb-5">Главный офис:</span>
-					г. Мытищи, Ярославское ш., стр.&nbsp;1, вл.&nbsp;1, оф.&nbsp;302
-					<span class="uk-display-block uk-text-bold mb-5 mt-10">Технический офис:</span>
-					Москва, Ярославское шоссе, 120&nbsp;б, стр.&nbsp;3
-				</p>
-				<a href="" class="footerYellowLink">Схема проезда</a>
 			</div>
 		</div>
 	</div>
@@ -2054,7 +2136,7 @@
 			<div class="uk-width-expand">
 				Данный сайт носит исключительно информационный характер и не является публичной офертой, определяемой положениями статьи 437 Гражданского кодекса Российской Федерации.
 			</div>
-			<div class="uk-width-1-6@m uk-text-right">
+			<div class="uk-width-1-6@s uk-text-right@s uk-text-center">
 				<a href="https://unkle.pro/" target="_blank">Made by UNKle</a>
 			</div>
 		</div>
@@ -2063,8 +2145,8 @@
 <div id="callMe" data-uk-modal>
     <div class="uk-modal-dialog uk-margin-auto-vertical uk-modal-body p-0">
         <button class="uk-modal-close-outside" type="button" data-uk-close></button>
-        <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-stretch" data-uk-grid>
-            <div class="uk-cover-container">
+        <div class="uk-grid-collapse uk-child-width-1-2@m uk-flex-stretch" data-uk-grid>
+            <div class="uk-cover-container uk-visible@m">
             	<img src="#" data-src="img/callMeImg.jpg" alt="" data-uk-img="">
             </div>
             <div class="ph-30 pv-40">
@@ -2099,6 +2181,436 @@
 <div class="toTop">
 	<a href="#" data-uk-totop data-uk-scroll></a>
 </div>
+<div class="mobile_menu_container">
+	<div class="mobile_menu_content">
+		<div class="closeMobileMenu">
+			<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1.52344" y="0.253784" width="21.5296" height="2.15296" rx="1.07648" transform="rotate(45 1.52344 0.253784)"/><rect x="0.253906" y="15.2238" width="21.5296" height="2.15296" rx="1.07648" transform="rotate(-45 0.253906 15.2238)"/></svg>
+		</div>
+		<div class="position-relative">
+			<ul>
+				<li>
+					<div class="parentMobileWrap">
+						<a href="" class="parent">О компании</a>
+						<span class="openSubMenu">
+							<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M6.74815 6.59406L1.46799 11.7537C1.1321 12.0821 0.587529 12.0821 0.25181 11.7537C-0.0839366 11.4256 -0.0839366 10.8935 0.25181 10.5654L4.92394 5.99991L0.251945 1.43457C-0.0838008 1.10635 -0.0838008 0.574263 0.251945 0.24617C0.587692 -0.0820565 1.13224 -0.0820565 1.46812 0.24617L6.74829 5.4059C6.91616 5.57002 7 5.7849 7 5.99989C7 6.21498 6.916 6.43002 6.74815 6.59406Z" fill="#FCB317"/></svg>
+						</span>
+					</div>
+					<ul>
+						<li><a href="#" class="back">Назад</a></li>
+						<li><a href="/about/sertificate/">Сертификаты</a>  
+						</li>
+						<li><a href="/about/preimushestva/">Наши преимущества</a>  
+						</li>
+						<li><a href="/news/">Новости</a>  
+						</li>
+						<li><a href="/about/reviews/">Отзывы</a>  
+						</li>
+						<li><a href="/about/partners/">Партнеры</a>  
+						</li>
+						<li><a href="/about/catalog-1/">Печатный каталог</a>  
+						</li>
+						<li><a href="/about/details/">Реквизиты</a>  
+						</li>
+					</ul>
+				</li>
+				<li>
+					<div class="parentMobileWrap">
+						<a href="" class="parent">Акции</a>
+						<span class="openSubMenu">
+							<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M6.74815 6.59406L1.46799 11.7537C1.1321 12.0821 0.587529 12.0821 0.25181 11.7537C-0.0839366 11.4256 -0.0839366 10.8935 0.25181 10.5654L4.92394 5.99991L0.251945 1.43457C-0.0838008 1.10635 -0.0838008 0.574263 0.251945 0.24617C0.587692 -0.0820565 1.13224 -0.0820565 1.46812 0.24617L6.74829 5.4059C6.91616 5.57002 7 5.7849 7 5.99989C7 6.21498 6.916 6.43002 6.74815 6.59406Z" fill="#FCB317"/></svg>
+						</span>
+					</div>
+					<ul>
+						<li><a href="#" class="back">Назад</a></li>
+						<li><a href="/offers/skidki-na-okna/">Скидки на остекление</a>  
+						</li>
+						<li><a href="/offers/proekt_akciya/">Акция на проектирование</a>  
+						</li>
+						<li><a href="/projects/gazobeton/15-132/">Проект дома 15-132</a>  
+						</li>
+						<li><a href="/projects/gazobeton/proekt-20-216/">Проект дома 20-216</a>  
+						</li>
+						<li><a href="/projects/doma-iz-gazosilikata/20-24/">Проект дома 20-24</a>  
+						</li>
+						<li><a href="/offers/formula-tepla/">Формула тепла</a>  
+						</li>
+						<li><a href="/offers/konstruktivnie-elementi-v-podarok/">Конструктивные элементы дома в подарок</a>  
+						</li>
+						<li><a href="/offers/besplatniy-eskiz-proekt/">Бесплатный эскиз проекта</a>  
+						</li>
+						<li><a href="/geografiya-stroitelstva/">География строительства </a>  
+						</li>
+					</ul>
+				</li>
+				<li>
+					<div class="parentMobileWrap">
+						<a href="" class="parent">Отделка и монтаж</a>
+						<span class="openSubMenu">
+							<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M6.74815 6.59406L1.46799 11.7537C1.1321 12.0821 0.587529 12.0821 0.25181 11.7537C-0.0839366 11.4256 -0.0839366 10.8935 0.25181 10.5654L4.92394 5.99991L0.251945 1.43457C-0.0838008 1.10635 -0.0838008 0.574263 0.251945 0.24617C0.587692 -0.0820565 1.13224 -0.0820565 1.46812 0.24617L6.74829 5.4059C6.91616 5.57002 7 5.7849 7 5.99989C7 6.21498 6.916 6.43002 6.74815 6.59406Z" fill="#FCB317"/></svg>
+						</span>
+					</div>
+					<ul>
+						<li><a href="#" class="back">Назад</a></li>
+						<li>
+							<div class="parentMobileWrap">
+								<a href="/technologies-and-materials/otdelka-fasadov/" class="parent">Отделка фасадов</a>
+								<span class="openSubMenu">
+									<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M6.74815 6.59406L1.46799 11.7537C1.1321 12.0821 0.587529 12.0821 0.25181 11.7537C-0.0839366 11.4256 -0.0839366 10.8935 0.25181 10.5654L4.92394 5.99991L0.251945 1.43457C-0.0838008 1.10635 -0.0838008 0.574263 0.251945 0.24617C0.587692 -0.0820565 1.13224 -0.0820565 1.46812 0.24617L6.74829 5.4059C6.91616 5.57002 7 5.7849 7 5.99989C7 6.21498 6.916 6.43002 6.74815 6.59406Z" fill="#FCB317"/></svg>
+								</span>
+							</div>
+							<ul>
+								<li><a href="#" class="back">Назад</a></li>
+								<li><a href="/technologies-and-materials/otdelka-fasadov/oblicovka-kirpichom/">Облицовка кирпичом</a>  </li>
+								<li><a href="/technologies-and-materials/otdelka-fasadov/vinilovii-saiding/">Виниловый-сайдинг</a>  </li>
+								<li><a href="/technologies-and-materials/otdelka-fasadov/ventilirumie-fasadi/">Вентелируемые фасады</a>  </li>
+								<li><a href="/technologies-and-materials/otdelka-fasadov/shtukaturka-gazobetona/">Штукатурка фасада</a>  </li>
+								<li><a href="/technologies-and-materials/otdelka-fasadov/otdelka-saidingom/">Oтделка сайдингом </a>  </li>
+							</ul>
+						</li>
+						<li>
+							<div class="parentMobileWrap">
+								<a href="/technologies-and-materials/vnutrennyaya-otdelka/" class="parent">Внутренняя отделка</a>
+								<span class="openSubMenu">
+									<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M6.74815 6.59406L1.46799 11.7537C1.1321 12.0821 0.587529 12.0821 0.25181 11.7537C-0.0839366 11.4256 -0.0839366 10.8935 0.25181 10.5654L4.92394 5.99991L0.251945 1.43457C-0.0838008 1.10635 -0.0838008 0.574263 0.251945 0.24617C0.587692 -0.0820565 1.13224 -0.0820565 1.46812 0.24617L6.74829 5.4059C6.91616 5.57002 7 5.7849 7 5.99989C7 6.21498 6.916 6.43002 6.74815 6.59406Z" fill="#FCB317"/></svg>
+								</span>
+							</div> 
+							<ul>
+								<li><a href="#" class="back">Назад</a></li>
+								<li>
+									<div class="parentMobileWrap">
+										<a href="/technologies-and-materials/vnutrennyaya-otdelka/otdelka-potolkov/" class="parent">Отделка потолков</a>
+										<span class="openSubMenu">
+											<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M6.74815 6.59406L1.46799 11.7537C1.1321 12.0821 0.587529 12.0821 0.25181 11.7537C-0.0839366 11.4256 -0.0839366 10.8935 0.25181 10.5654L4.92394 5.99991L0.251945 1.43457C-0.0838008 1.10635 -0.0838008 0.574263 0.251945 0.24617C0.587692 -0.0820565 1.13224 -0.0820565 1.46812 0.24617L6.74829 5.4059C6.91616 5.57002 7 5.7849 7 5.99989C7 6.21498 6.916 6.43002 6.74815 6.59406Z" fill="#FCB317"/></svg>
+										</span>
+									</div> 
+									<ul>
+										<li><a href="#" class="back">Назад</a></li>
+										<li><a href="/technologies-and-materials/vnutrennyaya-otdelka/otdelka-potolkov/natagnie-potolki/">Натяжные потолки</a>  </li>
+										<li><a href="/technologies-and-materials/vnutrennyaya-otdelka/otdelka-potolkov/podvesnie-potolki/">Подвесные потолки</a>  </li>
+									</ul>
+								</li>
+								<li><a href="/technologies-and-materials/vnutrennyaya-otdelka/stiazhka-pola/">Cтяжка пола</a>  </li>
+								<li><a href="/technologies-and-materials/vnutrennyaya-otdelka/otdelka-sten/">Отделка стен</a>  </li>
+							</ul>
+						</li>
+						<li>
+							<div class="parentMobileWrap">
+								<a href="/technologies-and-materials/windows/" class="parent">Остекление</a>
+								<span class="openSubMenu">
+									<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M6.74815 6.59406L1.46799 11.7537C1.1321 12.0821 0.587529 12.0821 0.25181 11.7537C-0.0839366 11.4256 -0.0839366 10.8935 0.25181 10.5654L4.92394 5.99991L0.251945 1.43457C-0.0838008 1.10635 -0.0838008 0.574263 0.251945 0.24617C0.587692 -0.0820565 1.13224 -0.0820565 1.46812 0.24617L6.74829 5.4059C6.91616 5.57002 7 5.7849 7 5.99989C7 6.21498 6.916 6.43002 6.74815 6.59406Z" fill="#FCB317"/></svg>
+								</span>
+							</div>
+							<ul>
+								<li><a href="#" class="back">Назад</a></li>
+								<li><a href="/technologies-and-materials/windows/mansardnie-okna/">Мансардные окна</a>  </li>
+								<li><a href="/technologies-and-materials/windows/lucarna/">Люкарна (фасадное окно)</a>  </li>
+								<li><a href="/technologies-and-materials/windows/profil-schucco/">Профили SCHUCO</a>  </li>
+								<li><a href="/technologies-and-materials/windows/profil-rehau/">Профили REHAU</a>  </li>
+								<li><a href="/technologies-and-materials/windows/profil-kraspan/">Профили KRASPAN</a>  </li>
+							</ul>
+						</li>
+						<li>
+							<div class="parentMobileWrap">
+								<a href="/technologies-and-materials/wall-materials/" class="parent">Стеновые материалы</a>
+								<span class="openSubMenu">
+									<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M6.74815 6.59406L1.46799 11.7537C1.1321 12.0821 0.587529 12.0821 0.25181 11.7537C-0.0839366 11.4256 -0.0839366 10.8935 0.25181 10.5654L4.92394 5.99991L0.251945 1.43457C-0.0838008 1.10635 -0.0838008 0.574263 0.251945 0.24617C0.587692 -0.0820565 1.13224 -0.0820565 1.46812 0.24617L6.74829 5.4059C6.91616 5.57002 7 5.7849 7 5.99989C7 6.21498 6.916 6.43002 6.74815 6.59406Z" fill="#FCB317"/></svg>
+								</span>
+							</div>
+							<ul>
+								<li><a href="#" class="back">Назад</a></li>
+								<li><a href="/technologies-and-materials/wall-materials/blogi-bonolit/">Газобетонные блоки Bonolit</a>  </li>
+								<li><a href="/technologies-and-materials/wall-materials/poritep/">Строительство из блоков PORITEP</a>  </li>
+								<li><a href="/technologies-and-materials/wall-materials/eco-block/">Газобетонные блоки ЭКО</a>  </li>
+								<li><a href="/technologies-and-materials/wall-materials/gras-block/">Газобетонные блоки ГРАС</a>  </li>
+								<li><a href="/technologies-and-materials/wall-materials/ytong-block/">Газобетонные блоки Ytong</a>  </li>
+								<li><a href="/technologies-and-materials/wall-materials/aerostone-block/">Газобетонные блоки AeroStone</a>  </li>
+								<li><a href="/technologies-and-materials/wall-materials/bikton-block/">Газобетонные блоки Bikton</a>  </li>
+								<li><a href="/technologies-and-materials/wall-materials/drauber-block/">Газобетонные блоки Drauber</a>  </li>
+								<li><a href="/technologies-and-materials/wall-materials/el-block/">Газобетонные блоки El-Block</a>  </li>
+								<li><a href="/technologies-and-materials/wall-materials/egorevskij-block/">Газобетонные блоки Егорьевского завода</a>  </li>
+								<li><a href="/technologies-and-materials/wall-materials/kaluzhskij-gazobeton/">Калужский газобетон</a>  </li>
+							</ul>
+						</li>
+						<li>
+							<div class="parentMobileWrap">
+								<a href="/technologies-and-materials/roofing-materials/" class="parent">Кровельные материалы</a>
+								<span class="openSubMenu">
+									<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M6.74815 6.59406L1.46799 11.7537C1.1321 12.0821 0.587529 12.0821 0.25181 11.7537C-0.0839366 11.4256 -0.0839366 10.8935 0.25181 10.5654L4.92394 5.99991L0.251945 1.43457C-0.0838008 1.10635 -0.0838008 0.574263 0.251945 0.24617C0.587692 -0.0820565 1.13224 -0.0820565 1.46812 0.24617L6.74829 5.4059C6.91616 5.57002 7 5.7849 7 5.99989C7 6.21498 6.916 6.43002 6.74815 6.59406Z" fill="#FCB317"/></svg>
+								</span>
+							</div>
+							<ul>
+								<li><a href="#" class="back">Назад</a></li>
+								<li><a href="/technologies-and-materials/roofing-materials/gibkaia-cherepici/">Гибкая (битумная) черепица</a>  </li>
+								<li><a href="/technologies-and-materials/roofing-materials/naturalnaya-cherepica/">Натуральная черепица</a>  </li>
+								<li><a href="/technologies-and-materials/roofing-materials/metallocherepica/">Металлочерепица</a>  </li>
+								<li><a href="/technologies-and-materials/roofing-materials/kompozitnaya-cherepica/">Композитная черепица</a>  </li>
+							</ul>
+						</li>
+						<li>
+							<div class="parentMobileWrap">
+								<a href="/technologies-and-materials/konstrukcii-iz-betona/" class="parent">Кровельные материалы</a>
+								<span class="openSubMenu">
+									<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M6.74815 6.59406L1.46799 11.7537C1.1321 12.0821 0.587529 12.0821 0.25181 11.7537C-0.0839366 11.4256 -0.0839366 10.8935 0.25181 10.5654L4.92394 5.99991L0.251945 1.43457C-0.0838008 1.10635 -0.0838008 0.574263 0.251945 0.24617C0.587692 -0.0820565 1.13224 -0.0820565 1.46812 0.24617L6.74829 5.4059C6.91616 5.57002 7 5.7849 7 5.99989C7 6.21498 6.916 6.43002 6.74815 6.59406Z" fill="#FCB317"/></svg>
+								</span>
+							</div>
+							<ul>
+								<li><a href="#" class="back">Назад</a></li>
+								<li>
+									<div class="parentMobileWrap">
+										<a href="/technologies-and-materials/konstrukcii-iz-betona/foundation/" class="parent">Фундаменты</a> 
+										<span class="openSubMenu">
+											<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M6.74815 6.59406L1.46799 11.7537C1.1321 12.0821 0.587529 12.0821 0.25181 11.7537C-0.0839366 11.4256 -0.0839366 10.8935 0.25181 10.5654L4.92394 5.99991L0.251945 1.43457C-0.0838008 1.10635 -0.0838008 0.574263 0.251945 0.24617C0.587692 -0.0820565 1.13224 -0.0820565 1.46812 0.24617L6.74829 5.4059C6.91616 5.57002 7 5.7849 7 5.99989C7 6.21498 6.916 6.43002 6.74815 6.59406Z" fill="#FCB317"/></svg>
+										</span>
+									</div>
+									<ul>
+										<li><a href="#" class="back">Назад</a></li>
+										<li><a href="/technologies-and-materials/konstrukcii-iz-betona/foundation/cvaiko-rostverkovii-fundament/">Свайно-ростверковый фундамент</a>  </li>
+										<li><a href="/technologies-and-materials/konstrukcii-iz-betona/foundation/monolitniy-fundament/">Монолитный фундамент</a>  </li>
+									</ul>
+								</li>
+								<li><a href="/technologies-and-materials/konstrukcii-iz-betona/pliti-perecritia/">Плиты перекрытия</a>  </li>
+								<li><a href="/technologies-and-materials/konstrukcii-iz-betona/monolitnoe-perekritie/">Монолитное перекрытие</a>  </li>
+								<li><a href="/technologies-and-materials/konstrukcii-iz-betona/armopoias/">Армопояса</a>  </li>
+							</ul>
+						</li>
+						<li>
+							<div class="parentMobileWrap">
+								<a href="/technologies-and-materials/engineering-systems/" class="parent">Инженерные системы</a> 
+								<span class="openSubMenu">
+									<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M6.74815 6.59406L1.46799 11.7537C1.1321 12.0821 0.587529 12.0821 0.25181 11.7537C-0.0839366 11.4256 -0.0839366 10.8935 0.25181 10.5654L4.92394 5.99991L0.251945 1.43457C-0.0838008 1.10635 -0.0838008 0.574263 0.251945 0.24617C0.587692 -0.0820565 1.13224 -0.0820565 1.46812 0.24617L6.74829 5.4059C6.91616 5.57002 7 5.7849 7 5.99989C7 6.21498 6.916 6.43002 6.74815 6.59406Z" fill="#FCB317"/></svg>
+								</span>
+							</div>
+							<ul>
+								<li><a href="#" class="back">Назад</a></li>
+								<li><a href="/technologies-and-materials/engineering-systems/otoplenie/">Отоплениe</a>  </li>
+								<li><a href="/technologies-and-materials/engineering-systems/jelektromontazhnye-raboty/">Электрика</a>  </li>
+								<li><a href="/technologies-and-materials/engineering-systems/dimohodi/">Дымоходы</a>  </li>
+							</ul>
+						</li>
+						<li>
+							<div class="parentMobileWrap">
+								<a href="/technologies-and-materials/stroitelnaya-fizika/" class="parent">Строительная физика</a>  
+								<span class="openSubMenu">
+									<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M6.74815 6.59406L1.46799 11.7537C1.1321 12.0821 0.587529 12.0821 0.25181 11.7537C-0.0839366 11.4256 -0.0839366 10.8935 0.25181 10.5654L4.92394 5.99991L0.251945 1.43457C-0.0838008 1.10635 -0.0838008 0.574263 0.251945 0.24617C0.587692 -0.0820565 1.13224 -0.0820565 1.46812 0.24617L6.74829 5.4059C6.91616 5.57002 7 5.7849 7 5.99989C7 6.21498 6.916 6.43002 6.74815 6.59406Z" fill="#FCB317"/></svg>
+								</span>
+							</div>
+							<ul>
+								<li><a href="#" class="back">Назад</a></li>
+								<li><a href="/technologies-and-materials/stroitelnaya-fizika/ekologichnost/">Экологичность газобетона</a>  </li>
+								<li><a href="/technologies-and-materials/stroitelnaya-fizika/zvukoizoliacia/">Звукоизоляция газобетона</a>  </li>
+								<li><a href="/technologies-and-materials/stroitelnaya-fizika/gidroizolyaciya-gazobetona/">Гидроизоляция газобетона</a>  </li>
+							</ul>
+						</li>
+						<li id="interesnye-stati"><a href="/technologies-and-materials/interesnye-stati/">Интересные статьи</a>  </li>
+						<li><a href="/faq/">F.A.Q.</a>  </li>
+					</ul>
+				</li>
+				<li>
+					<div class="parentMobileWrap">
+						<a href="" class="parent">Проекты</a>  
+						<span class="openSubMenu">
+							<svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M6.74815 6.59406L1.46799 11.7537C1.1321 12.0821 0.587529 12.0821 0.25181 11.7537C-0.0839366 11.4256 -0.0839366 10.8935 0.25181 10.5654L4.92394 5.99991L0.251945 1.43457C-0.0838008 1.10635 -0.0838008 0.574263 0.251945 0.24617C0.587692 -0.0820565 1.13224 -0.0820565 1.46812 0.24617L6.74829 5.4059C6.91616 5.57002 7 5.7849 7 5.99989C7 6.21498 6.916 6.43002 6.74815 6.59406Z" fill="#FCB317"/></svg>
+						</span>
+					</div>
+					<ul>
+						<li><a href="#" class="back">Назад</a></li>
+						<li><a href="/projects/gazobeton/">Проекты из газобетона</a>  
+						</li>
+						<li><a href="/projects/iz-jacheistogo-betona/">Проекты из ячеистого бетона</a>  
+						</li>
+						<li><a href="/projects/doma-iz-gazosilikata/">Проекты из газосиликата</a>  
+						</li>
+						<li><a href="/projects/penobeton/">Проекты из пенобетона</a>  
+						</li>
+						<li><a href="/projects/doma-do-100m/">Проекты до 100 кв.м</a>  
+						</li>
+						<li><a href="/projects/doma-100-200m/">Проекты 100-200 кв.м</a>  
+						</li>
+						<li><a href="/projects/doma-200-300m/">Проекты 200-300 кв.м</a>  
+						</li>
+						<li><a href="/projects/doma-ot-300m/">Проекты от 300 кв.м</a>  
+						</li>
+						<li><a href="/projects/garazhi-iz-gazobetona/">Гаражи из газобетона</a>  
+						</li>
+						<li><a href="/projects/proektirovanie/">Услуги по проектированию</a>  
+						</li>
+						<li><a href="/projects/projects-modern-style/">Дома в современном стиле</a>  
+						</li>
+						<li><a href="/projects/dachnye-doma-iz-gazobetona/">Дачные дома из газобетона</a>  
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="">Стоимость</a>
+				</li>
+				<li>
+					<a href="">Объекты</a>
+				</li>
+				<li>
+					<a href="">Контакты</a>
+				</li>
+			</ul>
+		</div>
+		<div class="mv-15 ph-30">
+			<a href="" class="btn yellowBtn uk-width-1-1 mobileFastCalc">Запросить быстрый расчет</a>
+		</div>
+		<form action="#" class="mobileSearch ph-30">
+			<input type="text" placeholder="Поиск по сайту" class="uk-input">
+			<button class="btn yellowBtn"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.9836 10.3176H11.7246L16.405 15.0074L15.0074 16.405L10.3176 11.7246V10.9836L10.0644 10.7209C8.99508 11.6401 7.60689 12.1935 6.09677 12.1935C2.72948 12.1935 0 9.46406 0 6.09677C0 2.72948 2.72948 0 6.09677 0C9.46406 0 12.1935 2.72948 12.1935 6.09677C12.1935 7.60689 11.6401 8.99508 10.7209 10.0644L10.9836 10.3176ZM1.87597 6.09674C1.87597 8.43227 3.76128 10.3176 6.09681 10.3176C8.43234 10.3176 10.3177 8.43227 10.3177 6.09674C10.3177 3.7612 8.43234 1.8759 6.09681 1.8759C3.76128 1.8759 1.87597 3.7612 1.87597 6.09674Z" fill="white"/></svg></button>
+		</form>
+		<div class="mv-15 ph-30">
+			<a href="" class="btn yellowBtn uk-width-1-1 mobileFilterBtn"><svg width="18" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M0 0h18v2H0zM0 7h10v2H0zM0 14h6v2H0z"/></svg><span class="ml-10">Фильт проектов</span></a>
+		</div>
+	</div>
+</div>
+<div class="mobile_sidebar_container">
+	<div class="mobile_menu_content ph-30">
+		<div class="closeMobileMenu">
+			<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1.52344" y="0.253784" width="21.5296" height="2.15296" rx="1.07648" transform="rotate(45 1.52344 0.253784)"/><rect x="0.253906" y="15.2238" width="21.5296" height="2.15296" rx="1.07648" transform="rotate(-45 0.253906 15.2238)"/></svg>
+		</div>
+		<a href="tel:84952330070" class="mobilePhone"><span data-uk-icon="receiver"></span>8-495-233-00-70</a>
+		<a href="#callMe" class="btn transBtn uk-width-1-1 mt-20" data-uk-toggle>Заказать звонок</a>
+		<hr>
+		<div class="whatsapp">
+			<a href="">
+				<span data-uk-icon="whatsapp" class="uk-icon"></span><span class="text">WhatsApp</span>	
+			</a>
+		</div>
+		<hr>
+		<div class="mobileIconText">
+			<a href="mailto:mail@hbtech.ru">
+				<span data-uk-icon="mail" class="uk-icon"></span><span class="text">mail@hbtech.ru</span>	
+			</a>
+		</div>
+		<hr>
+		<div class="mobileIcons">
+			<a href="" class="uk-icon-link" data-uk-icon="vk"></a>
+			<a href="" class="uk-icon-link" data-uk-icon="instagram"></a>
+			<a href="" class="uk-icon-link" data-uk-icon="youtube"></a>
+			<a href="" class="uk-icon-link" data-uk-icon="facebook"></a>
+		</div>
+	</div>
+</div>
+<div class="mobile_filter_container pt-0">
+	<div class="mobile_menu_content ph-15">
+		<div class="mobileFilterTitle">
+			<img src="img/mobileFilterTitle.svg" alt="" class="mr-15">Фильтр проектов
+		</div>
+		<div class="closeMobileMenu">
+			<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1.52344" y="0.253784" width="21.5296" height="2.15296" rx="1.07648" transform="rotate(45 1.52344 0.253784)"/><rect x="0.253906" y="15.2238" width="21.5296" height="2.15296" rx="1.07648" transform="rotate(-45 0.253906 15.2238)"/></svg>
+		</div>
+		<div class="mobileFilterWrap">
+			<div class="filterLinks">
+				<a href="">Популярные</a>
+				<a href="">Новинки</a>
+			</div>
+			<form action="#">
+				<div class="filterBlock">
+					<div class="filterName">Площадь</div>
+					<div class="filterInputWrap">
+						<div>
+							<input type="text" min="0" max="40" step="1" id="input-numberMobile">
+							<span>м<sup>2</sup></span>
+						</div>
+						<div class="delimeter">&mdash;</div>
+						<div>
+							<input type="text" min="0" max="40" step="1" id="input-number2Mobile">
+							<span>м<sup>2</sup></span>
+						</div>
+					</div>
+					<div id="squareMobile"></div>
+				</div>
+				<div class="filterBlock">
+					<div class="filterName">Габариты дома</div>
+					<p class="mb-5 mt-0">Длина</p>
+					<div class="filterInputWrap">
+						<div>
+							<input type="text" min="0" max="40" step="1" id="input-lengthHouseMobile">
+							<span>м</span>
+						</div>
+						<div class="delimeter">&mdash;</div>
+						<div>
+							<input type="text" min="0" max="40" step="1" id="input-lengthHouse2Mobile">
+							<span>м</span>
+						</div>
+					</div>
+					<div id="lengthHouseMobile"></div>
+					<p class="mb-5">Ширина</p>
+					<div class="filterInputWrap">
+						<div>
+							<input type="text" min="0" max="40" step="1" id="input-widthHouseMobile">
+							<span>м</span>
+						</div>
+						<div class="delimeter">&mdash;</div>
+						<div>
+							<input type="text" min="0" max="40" step="1" id="input-widthHouse2Mobile">
+							<span>м</span>
+						</div>
+					</div>
+					<div id="widthHouseMobile"></div>
+				</div>
+				<div class="filterBlock">
+					<div class="filterName">ЭТАЖНОСТЬ</div>
+					<div class="mb-10">
+						<label><input class="uk-checkbox" type="checkbox"> одноэтажный</label>
+					</div>
+					<div class="mb-10">
+						<label><input class="uk-checkbox" type="checkbox" checked> один этаж + мансарда</label>
+					</div>
+					<div class="mb-10">
+						<label><input class="uk-checkbox" type="checkbox"> два этажа</label>
+					</div>
+					<div class="mb-10">
+						<label><input class="uk-checkbox" type="checkbox"> два этажа + мансарда</label>
+					</div>
+					<div class="mb-10">
+						<label><input class="uk-checkbox" type="checkbox"> три этажа</label>
+					</div>
+					<div class="mb-10">
+						<label><input class="uk-checkbox" type="checkbox"> три этажа + мансарда</label>
+					</div>
+				</div>
+				<div class="filterBlock">
+					<div class="filterName">Гараж</div>
+					<div class="mb-10">
+						<label><input class="uk-checkbox" type="checkbox"> Да</label>
+					</div>
+					<div class="mb-10">
+						<label><input class="uk-checkbox" type="checkbox" checked> Нет</label>
+					</div>
+				</div>
+				<div class="filterBlock">
+					<div class="filterName">Тип постройки</div>
+					<div class="mb-10">
+						<label><input class="uk-checkbox" type="checkbox"> Гараж</label>
+					</div>
+					<div class="mb-10">
+						<label><input class="uk-checkbox" type="checkbox" checked> Дом</label>
+					</div>
+				</div>
+				<button class="btn yellowBtn uk-width-1-1">Подобрать проект</button>
+				<div class="uk-text-center mt-15">
+					<button type="reset">Сбросить фильтр</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="mobile_menu_overlay"></div>
 <script src="js/main.min.js"></script>
 </body>
 </html>

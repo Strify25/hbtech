@@ -110,6 +110,10 @@ header {
 	} 
 }
 
+.mobileHeader {
+	display: none;
+}
+
 .mainNav {
 	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.05);
 	background: #fff;
@@ -122,7 +126,7 @@ header {
 			display: block;
 		}
 		.menuCallMe {
-			display: inline-block;
+			display: inline-flex;
 		}
 	}
 }
@@ -134,6 +138,10 @@ header {
 
 .menuCallMe {
 	display: none;
+
+	.uk-icon {
+		display: none;
+	}
 }
 
 .mainMenu {
@@ -327,6 +335,11 @@ header {
 			width: 100%;
 		}
 	}
+}
+
+.slideText {
+	height: 261px;
+	max-height: 65%;
 }
 
 .mainSliderThumbs {
@@ -1028,12 +1041,12 @@ footer {
 
 .toTop {
 	position: fixed;
-	right: 20px;
-	bottom: -50px;
+	bottom: 20px;
+	right: -50px;
 	transition: all .3s;
 
 	&.active {
-		bottom: 20px;
+		right: 20px;
 	}
 	a {
 		display: flex;
@@ -1051,4 +1064,8 @@ footer {
 			background: $yellowHover;
 		}
 	}
+}
+
+.mobile_menu_container, .mobile_sidebar_container, .mobileSlider, .mobile_filter_container {
+	display: none;
 }
