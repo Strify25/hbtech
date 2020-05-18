@@ -6,4 +6,5 @@
 //= uikit-icons.min.js
 //= jquery.inputmask.min.js
 //= nouislider.min.js
+//= validate.min.js
 //= my.js

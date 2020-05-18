@@ -1,4 +1,9 @@
 jQuery(document).ready(function($) {
+	$("[name='phone']").inputmask({
+		mask: "+7 (999) 999-99-99",
+		showMaskOnHover: false
+	});
+
 	$('.menuBg').each(function(index, el) {
 		$(this).height($(this).parent("ul").height()+100);
 	});
@@ -8,6 +13,15 @@ jQuery(document).ready(function($) {
 		
 		$('.searchWrap').toggleClass('active').find('input').focus();
 	});
+	
+    $(".inputGroup input, .inputGroup textarea").focus(function(){
+    	$(this).parent().addClass("active completed");
+    });
+
+    $(".inputGroup input, .inputGroup textarea").focusout(function(){
+    	if($(this).val() === "") $(this).parent().removeClass("completed");
+    	$(this).parent().removeClass("active");
+    })
 
 	$(".imageDots a").hover(function() {
 		var parent = $(this).parents(".uk-slideshow");
@@ -19,6 +33,58 @@ jQuery(document).ready(function($) {
 		UIkit.slider("#sertificatesSlider", {draggable:false});
 		UIkit.slider("#clientsSlider", {draggable:false});
 	}
+
+	$("#callMeForm").validate({
+            rules: {
+                name: {
+                    required: true
+                },
+                phone: {
+                    required: true
+                },
+            },
+            messages: {
+                name: {
+                    required: "Поле обязательно для заполнения",
+                    maxlength: "",
+                },
+                phone: {
+                    required: "Поле обязательно для заполнения",
+                    maxlength: "",
+                }
+            },
+            errorElement: "div",
+            errorClass: "uk-form-danger",
+            validClass: "uk-form-success",
+            submitHandler: function (form) {
+            	$('.callMeWrap').toggleClass('uk-hidden');
+            	$('.callMeOk').toggleClass('uk-hidden');
+                // $.ajax({
+                //     url: path,
+                //     type: 'POST',
+                //     dataType: 'json',
+                //     data: $(form).serialize(),
+                // }).done(function (res) {
+                //     $(form).find('input[type="text"]').val("").parent().removeClass('completed');
+                //     $(form).find('textarea').val("").parent().removeClass('completed');
+                    
+                // })
+            }
+        }
+    );
+
+    UIkit.util.on("#callMe", 'hidden', function() {
+            	$('.callMeWrap').toggleClass('uk-hidden');
+            	$('.callMeOk').toggleClass('uk-hidden');
+    });
+
+	$(window).scroll(function() {
+		if($(this).scrollTop() != 0) {
+			$('.toTop').addClass('active');
+		} else {
+			$('.toTop').removeClass('active');
+		}
+	});
 
 	var html5Slider = document.getElementById('html5');
 	noUiSlider.create(html5Slider, {
@@ -41,8 +107,6 @@ jQuery(document).ready(function($) {
 	inputNumber.addEventListener('change', function () {
 	    html5Slider.noUiSlider.set([null, this.value]);
 	});
-
-
 
 	var lengthHouse = document.getElementById('lengthHouse');
 	noUiSlider.create(lengthHouse, {
