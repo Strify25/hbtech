@@ -11033,7 +11033,8 @@ return jQuery;
         "youtube": "<svg width=\"21\" height=\"15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M19.73 1.713C19.175.727 18.573.546 17.348.477c-1.223-.083-4.3-.118-6.966-.118-2.671 0-5.75.035-6.972.117-1.223.07-1.826.25-2.385 1.237C.454 2.698.16 4.395.16 7.381v.01c0 2.974.294 4.683.865 5.658.56.986 1.161 1.165 2.384 1.248 1.223.071 4.302.113 6.973.113 2.665 0 5.743-.042 6.968-.112 1.225-.083 1.826-.262 2.38-1.248.577-.975.868-2.684.868-5.657v-.007-.004c0-2.987-.291-4.684-.868-5.669zM7.824 11.217V3.553l6.387 3.832-6.387 3.832z\" fill=\"#fff\"/></svg>",
         "vk": "<svg width=\"21\" height=\"12\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M20.256 10.546c-.055-.092-.395-.83-2.03-2.348-1.712-1.59-1.482-1.331.58-4.08 1.256-1.673 1.758-2.695 1.6-3.132C20.258.57 19.334.68 19.334.68l-3.07.018s-.228-.03-.398.07c-.165.1-.27.33-.27.33s-.487 1.295-1.136 2.396c-1.368 2.324-1.917 2.446-2.14 2.302-.52-.336-.39-1.351-.39-2.072 0-2.252.341-3.191-.665-3.434-.335-.08-.58-.134-1.435-.143-1.096-.011-2.025.004-2.55.26-.35.172-.62.554-.455.576.204.026.663.124.907.456.316.428.305 1.39.305 1.39s.18 2.652-.423 2.981c-.415.226-.984-.235-2.204-2.344-.625-1.08-1.097-2.274-1.097-2.274S4.22.97 4.059.852C3.862.706 3.586.66 3.586.66L.666.679S.228.69.066.882c-.142.17-.01.52-.01.52S2.341 6.75 4.93 9.447c2.375 2.472 5.07 2.31 5.07 2.31h1.222s.369-.041.556-.244c.174-.187.168-.537.168-.537s-.024-1.639.737-1.88c.75-.238 1.713 1.584 2.734 2.285.771.53 1.358.414 1.358.414l2.73-.038s1.428-.088.75-1.211z\" fill=\"#fff\"/></svg>",
         "star-full": "<svg width=\"28\" height=\"27\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><g filter=\"url(#filter0_d)\"><path d=\"M23.228 8.98a1.023 1.023 0 00-.881-.703l-5.565-.505-2.2-5.15a1.025 1.025 0 00-1.885 0l-2.2 5.15-5.565.505a1.026 1.026 0 00-.583 1.793l4.207 3.688-1.24 5.464a1.024 1.024 0 001.524 1.107l4.8-2.869 4.797 2.87a1.024 1.024 0 001.526-1.108l-1.24-5.464 4.206-3.688c.309-.27.426-.698.3-1.09z\" fill=\"#F5F5F5\"/></g><defs><filter id=\"filter0_d\" x=\"0\" y=\"0\" width=\"27.279\" height=\"26.475\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\"><feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/><feColorMatrix in=\"SourceAlpha\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\"/><feOffset dy=\"2\"/><feGaussianBlur stdDeviation=\"2\"/><feColorMatrix values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.63 0\"/><feBlend in2=\"BackgroundImageFix\" result=\"effect1_dropShadow\"/><feBlend in=\"SourceGraphic\" in2=\"effect1_dropShadow\" result=\"shape\"/></filter></defs></svg>",
-        "compare": "<svg width=\"28\" height=\"28\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><g filter=\"url(#filter0_d)\"><path d=\"M19.95 8.355l2.915-.81a.565.565 0 10-.302-1.088l-3.624 1.006-4.735 1.315V2.565a.565.565 0 00-1.13 0v6.527L8.05 10.488l-3.636 1.01a.565.565 0 00.302 1.088l2.266-.63-2.901 4.837a.565.565 0 00-.08.291 4.2 4.2 0 004.194 4.194 4.2 4.2 0 004.194-4.194.564.564 0 00-.08-.29L9.06 11.378l8.81-2.447-2.901 4.837a.565.565 0 00-.08.29 4.2 4.2 0 004.194 4.195c1.12 0 2.174-.437 2.966-1.229a4.167 4.167 0 001.228-2.966.565.565 0 00-.08-.29L19.95 8.355zm-9.123 8.164H5.562l2.633-4.387 2.632 4.387zm5.625-3.025l2.632-4.387 2.632 4.387h-5.264z\" fill=\"#fff\"/></g><defs><filter id=\"filter0_d\" x=\"0\" y=\"0\" width=\"27.279\" height=\"27.278\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\"><feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/><feColorMatrix in=\"SourceAlpha\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\"/><feOffset dy=\"2\"/><feGaussianBlur stdDeviation=\"2\"/><feColorMatrix values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.63 0\"/><feBlend in2=\"BackgroundImageFix\" result=\"effect1_dropShadow\"/><feBlend in=\"SourceGraphic\" in2=\"effect1_dropShadow\" result=\"shape\"/></filter></defs></svg>"
+        "compare": "<svg width=\"28\" height=\"28\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><g filter=\"url(#filter0_d)\"><path d=\"M19.95 8.355l2.915-.81a.565.565 0 10-.302-1.088l-3.624 1.006-4.735 1.315V2.565a.565.565 0 00-1.13 0v6.527L8.05 10.488l-3.636 1.01a.565.565 0 00.302 1.088l2.266-.63-2.901 4.837a.565.565 0 00-.08.291 4.2 4.2 0 004.194 4.194 4.2 4.2 0 004.194-4.194.564.564 0 00-.08-.29L9.06 11.378l8.81-2.447-2.901 4.837a.565.565 0 00-.08.29 4.2 4.2 0 004.194 4.195c1.12 0 2.174-.437 2.966-1.229a4.167 4.167 0 001.228-2.966.565.565 0 00-.08-.29L19.95 8.355zm-9.123 8.164H5.562l2.633-4.387 2.632 4.387zm5.625-3.025l2.632-4.387 2.632 4.387h-5.264z\" fill=\"#fff\"/></g><defs><filter id=\"filter0_d\" x=\"0\" y=\"0\" width=\"27.279\" height=\"27.278\" filterUnits=\"userSpaceOnUse\" color-interpolation-filters=\"sRGB\"><feFlood flood-opacity=\"0\" result=\"BackgroundImageFix\"/><feColorMatrix in=\"SourceAlpha\" values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0\"/><feOffset dy=\"2\"/><feGaussianBlur stdDeviation=\"2\"/><feColorMatrix values=\"0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.63 0\"/><feBlend in2=\"BackgroundImageFix\" result=\"effect1_dropShadow\"/><feBlend in=\"SourceGraphic\" in2=\"effect1_dropShadow\" result=\"shape\"/></filter></defs></svg>",
+        "arrow-sort": "<svg width=\"8\" height=\"19\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3.646 18.354a.5.5 0 00.708 0l3.182-3.182a.5.5 0 10-.708-.708L4 17.293l-2.828-2.829a.5.5 0 10-.708.708l3.182 3.182zM3.5 0v18h1V0h-1z\" fill=\"#000\"/></svg>"
     });
 
     }
@@ -11152,6 +11153,55 @@ jQuery(document).ready(function($) {
         }
     );
 
+	$("#raschetForm").validate({
+            rules: {
+                name: {
+                    required: true
+                },
+                phone: {
+                    required: true
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+            },
+            messages: {
+                name: {
+                    required: "Поле обязательно для заполнения",
+                    maxlength: "",
+                },
+                phone: {
+                    required: "Поле обязательно для заполнения",
+                    maxlength: "",
+                },
+                email: {
+                    required: "Поле обязательно для заполнения",
+                    email: "Неверный формат email",
+                    maxlength: "",
+                }
+            },
+            errorElement: "div",
+            errorClass: "uk-form-danger",
+            validClass: "uk-form-success",
+            submitHandler: function (form) {
+            	$('.callMeWrap').addClass('uk-hidden');
+            	$('.callMeOk').removeClass('uk-hidden');
+            	UIkit.modal("#callMe").toggle();
+                // $.ajax({
+                //     url: path,
+                //     type: 'POST',
+                //     dataType: 'json',
+                //     data: $(form).serialize(),
+                // }).done(function (res) {
+                //     $(form).find('input[type="text"]').val("").parent().removeClass('completed');
+                //     $(form).find('textarea').val("").parent().removeClass('completed');
+                    
+                // })
+            }
+        }
+    );
+
     UIkit.util.on("#callMe", 'hidden', function() {
     	$('.callMeWrap').removeClass('uk-hidden');
     	$('.callMeOk').addClass('uk-hidden');
@@ -11207,6 +11257,22 @@ jQuery(document).ready(function($) {
         $(".mobile_menu_container").removeClass("loaded");
         $(".mobile_filter_container").addClass("loaded");
     });
+
+    $(document).on('click', '.showAll', function(event) {
+    	event.preventDefault();
+        var $text = ($(this).text() == "Показать все" ? "Скрыть" : "Показать все");
+        $(this).text($text).parents(".gabarites").find('.hider').toggle();
+    });
+
+
+
+
+
+
+
+
+
+
 
 
 	var html5Slider = document.getElementById('square');

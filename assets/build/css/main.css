@@ -7971,6 +7971,10 @@ p a {
 .uk-input, .uk-select, .uk-textarea {
   border: 1px solid #E1E1E1; }
 
+.uk-select:not([multiple]):not([size]) {
+  background-image: url("../img/select.svg");
+  background-position: calc(100% - 7px) 50%; }
+
 .uk-input {
   height: 55px; }
 
@@ -8008,7 +8012,7 @@ p a {
       justify-content: center;
   cursor: pointer;
   box-sizing: border-box;
-  height: 46px;
+  min-height: 46px;
   -webkit-appearance: none;
   font-size: 16px; }
   .btn.yellowBtn {
@@ -8927,6 +8931,154 @@ footer {
 
 .mobile_menu_container, .mobile_sidebar_container, .mobileSlider, .mobile_filter_container {
   display: none; }
+
+.uk-breadcrumb {
+  margin-top: 20px; }
+  .uk-breadcrumb li {
+    padding-left: 0;
+    margin-bottom: 0; }
+    .uk-breadcrumb li:before {
+      position: static;
+      content: "" !important;
+      width: 6px;
+      height: 8px;
+      background: url("../img/breadcrumbsArrow.svg") no-repeat center;
+      background-color: transparent;
+      margin-top: 10px !important; }
+    .uk-breadcrumb li:first-child:before {
+      display: none; }
+    .uk-breadcrumb li a {
+      color: #363636;
+      transition: all .3s;
+      border-bottom: 1px solid transparent; }
+      .uk-breadcrumb li a:hover {
+        border-bottom-color: #363636;
+        color: #363636; }
+    .uk-breadcrumb li span {
+      color: #969696 !important; }
+
+.zaprosWrap {
+  background: #F5F5F5;
+  padding: 55px 0; }
+
+.sorting select {
+  margin: 0 10px 0 20px;
+  max-width: 250px; }
+
+.sorting .changeSort {
+  -ms-flex: none;
+      flex: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  border: 1px solid #DDDDDD;
+  transition: all .3s; }
+  .sorting .changeSort:hover {
+    color: #363636;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); }
+
+.individualItemWrap {
+  border: 1px solid #DDDDDD;
+  padding: 35px 40px;
+  background: url("../img/individualItemWrap.jpg") no-repeat;
+  background-size: contain;
+  background-position: 100% 100%;
+  box-sizing: border-box; }
+  .individualItemWrap .h3 span {
+    display: block;
+    color: #FCB317; }
+
+.uk-pagination {
+  margin: 30px 0; }
+  .uk-pagination li {
+    padding: 0 5px; }
+    .uk-pagination li > * {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-align: center;
+          align-items: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid #DDDDDD;
+      border-radius: 2px;
+      color: #363636;
+      transition: all .3s; }
+      .uk-pagination li > *:hover {
+        border-color: #FCB317;
+        background: #FCB317;
+        color: #fff; }
+    .uk-pagination li.next > *, .uk-pagination li.previous > * {
+      border-color: transparent; }
+    .uk-pagination li.uk-active > * {
+      border-color: #FCB317;
+      background: #FCB317;
+      color: #fff; }
+    .uk-pagination li:before {
+      display: none; }
+
+.tags {
+  margin-top: 60px; }
+  .tags a {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+        align-items: center;
+    color: #363636;
+    min-height: 38px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background: #F5F5F5;
+    padding: 0 20px;
+    transition: all .3s; }
+    .tags a:hover {
+      background: #FCB317;
+      color: #363636;
+      text-decoration: none; }
+
+.gabarites a {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-align: center;
+      align-items: center;
+  color: #363636;
+  min-height: 38px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background: #F5F5F5;
+  padding: 0 20px;
+  transition: all .3s; }
+  .gabarites a:hover {
+    background: #FCB317;
+    color: #363636;
+    text-decoration: none; }
+
+.showAll {
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold; }
+
+.adaptiveVideo {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+  height: 0;
+  overflow: hidden; }
+  .adaptiveVideo iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-width: 0;
+    outline-width: 0; }
 
 @media (max-width: 1390px) {
   .menuCallMe {

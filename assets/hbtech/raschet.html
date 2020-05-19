@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    //= template/head.html
+</head>
+<body>
+
+//= template/header.html
+
+<div class="uk-container uk-container-xlarge">
+	<ul class="uk-breadcrumb">
+	    <li><a href="">Главная</a></li>
+	    <li><span>Запрос на быстрый расчет строительства дома</span></li>
+	</ul>
+	<h1>Запрос на быстрый расчет строительства дома</h1>
+	<p>Для наших клиентов мы предоставляем максимально быстрый расчет на строительство дома. Для этого вы можете воспользоваться формой на данной странице либо выслать запрос на почту mail@hbtech.ru Для точности расчетов просим максимально подробно описать все ваши комментарии и пожелания.</p>
+	<div class="zaprosWrap">
+		<form action="#" id="raschetForm" class="uk-flex-center" data-uk-grid>
+			<div class="uk-width-1-2@m">
+				<div class="inputGroup">
+        			<input class="uk-input" type="text" name="name" id="callMeFormName">
+        			<label class="inputName" for="callMeFormName">Ваше имя<span class="requared">*</span></label>
+        		</div>
+        		<div class="inputGroup">
+        			<input class="uk-input" type="text" name="phone" id="callMeFormPhone">
+        			<label class="inputName" for="callMeFormPhone">Ваш телефон<span class="requared">*</span></label>
+        		</div>
+        		<div class="inputGroup">
+        			<input class="uk-input" type="text" name="email" id="callMeFormEmail">
+        			<label class="inputName" for="callMeFormEmail">Ваш email<span class="requared">*</span></label>
+        		</div>
+        		<div class="inputGroup">
+        			<input class="uk-input" type="text" name="place" id="callMeFormPlace">
+        			<label class="inputName" for="callMeFormPlace">Место строительства</label>
+        		</div>
+        		<div class="inputGroup">
+        			<input class="uk-input" type="text" name="project" id="callMeFormProject">
+        			<label class="inputName" for="callMeFormProject">Номер нашего проекта для расчета стоимости</label>
+        		</div>
+        		<div class="inputGroup">
+        			<label>либо пришлите свой проект или его эскиз</label>
+        			<img src="#" data-src="img/uploadTemp.svg" class="uk-width-1-1 mt-10" alt="" data-uk-img="">
+        		</div>
+        		<div class="inputGroup">
+        			<textarea class="uk-textarea" name="comments" id="callMeFormComments" rows="8"></textarea>
+        			<label class="inputName" for="callMeFormComments">Ваши комментарии (дополнительные пожелания и пр.)</label>
+        		</div>
+        		<label><input class="uk-checkbox" type="checkbox" checked=""> Согласие на обработку <a href="/soglashenie-na-obrabotku-personalnyx-dannyx/">персональныx данных</a></label>
+        		<div class="mt-30">
+        			<button class="btn yellowBtn">ОТПРАВИТЬ</button>
+        		</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+//= template/footer.html
+</body>
+</html>

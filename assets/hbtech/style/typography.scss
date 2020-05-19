@@ -221,6 +221,11 @@ p {
 	border: 1px solid #E1E1E1;
 }
 
+.uk-select:not([multiple]):not([size]) {
+	background-image: url("../img/select.svg");
+	background-position: calc(100% - 7px) 50%;
+}
+
 .uk-input {
 	height: 55px;
 }
@@ -263,7 +268,7 @@ p {
 	justify-content: center;
 	cursor: pointer;
 	box-sizing: border-box;
-	height: 46px;
+	min-height: 46px;
 	-webkit-appearance: none;
 	font-size: 16px;
 	

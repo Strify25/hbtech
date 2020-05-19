@@ -91,6 +91,55 @@ jQuery(document).ready(function($) {
         }
     );
 
+	$("#raschetForm").validate({
+            rules: {
+                name: {
+                    required: true
+                },
+                phone: {
+                    required: true
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+            },
+            messages: {
+                name: {
+                    required: "Поле обязательно для заполнения",
+                    maxlength: "",
+                },
+                phone: {
+                    required: "Поле обязательно для заполнения",
+                    maxlength: "",
+                },
+                email: {
+                    required: "Поле обязательно для заполнения",
+                    email: "Неверный формат email",
+                    maxlength: "",
+                }
+            },
+            errorElement: "div",
+            errorClass: "uk-form-danger",
+            validClass: "uk-form-success",
+            submitHandler: function (form) {
+            	$('.callMeWrap').addClass('uk-hidden');
+            	$('.callMeOk').removeClass('uk-hidden');
+            	UIkit.modal("#callMe").toggle();
+                // $.ajax({
+                //     url: path,
+                //     type: 'POST',
+                //     dataType: 'json',
+                //     data: $(form).serialize(),
+                // }).done(function (res) {
+                //     $(form).find('input[type="text"]').val("").parent().removeClass('completed');
+                //     $(form).find('textarea').val("").parent().removeClass('completed');
+                    
+                // })
+            }
+        }
+    );
+
     UIkit.util.on("#callMe", 'hidden', function() {
     	$('.callMeWrap').removeClass('uk-hidden');
     	$('.callMeOk').addClass('uk-hidden');
@@ -146,6 +195,22 @@ jQuery(document).ready(function($) {
         $(".mobile_menu_container").removeClass("loaded");
         $(".mobile_filter_container").addClass("loaded");
     });
+
+    $(document).on('click', '.showAll', function(event) {
+    	event.preventDefault();
+        var $text = ($(this).text() == "Показать все" ? "Скрыть" : "Показать все");
+        $(this).text($text).parents(".gabarites").find('.hider').toggle();
+    });
+
+
+
+
+
+
+
+
+
+
 
 
 	var html5Slider = document.getElementById('square');
