@@ -7,4 +7,5 @@
 //= jquery.inputmask.min.js
 //= nouislider.min.js
 //= validate.min.js
+//= swiper.js
 //= my.js

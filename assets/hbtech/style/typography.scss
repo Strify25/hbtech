@@ -18,6 +18,10 @@ body {
 	flex: none;
 }
 
+.text-14 {
+	font-size: 14px;
+}
+
 h1, .h1 {
 	@include headers();
 	font-size: 2.375em;
@@ -340,6 +344,25 @@ p {
 		span {
 			border-bottom-color: $yellow;
 		}
+	}
+}
+
+.yellowLink {
+	font-family: 'Roboto Condensed';
+	text-transform: uppercase;
+	font-weight: bold;
+	transition: all .3s ease;
+	display: inline-block;
+	cursor: pointer;
+	box-sizing: border-box;
+	position: relative;
+	color: $yellow;
+	border-bottom: 1px solid transparent;
+
+	&:hover {
+		border-bottom-color: $yellow;
+		color: $yellow;
+		text-decoration: none;
 	}
 }
 

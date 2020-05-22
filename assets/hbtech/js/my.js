@@ -30,8 +30,57 @@ jQuery(document).ready(function($) {
 	});
 
 	if ($(window).width() > 960) {
+		$('#sertificatesSlider').find('ul').addClass('uk-slider-items');
+		$('#clientsSlider').find('ul').addClass('uk-slider-items');
+		
 		UIkit.slider("#sertificatesSlider", {draggable:false});
 		UIkit.slider("#clientsSlider", {draggable:false});
+
+		var projectsSlider = new Swiper ('.projectsSlider', {
+		    // Optional parameters
+		    loop: true,
+		    slidesPerView: 4,
+		    spaceBetween: 30,
+
+		    // Navigation arrows
+		    navigation: {
+		    	nextEl: '.projectsSlider-next',
+		    	prevEl: '.projectsSlider-prev',
+		    },
+		    breakpoints: {
+			    // when window width is >= 480px
+			    960: {
+			    	slidesPerView: 3,
+			    },
+			    // when window width is >= 640px
+			    1200: {
+			    	slidesPerView: 4,
+			    }
+			}
+		})
+
+		var viewedSlider = new Swiper ('.viewedSlider', {
+		    // Optional parameters
+		    loop: true,
+		    slidesPerView: 4,
+		    spaceBetween: 30,
+
+		    // Navigation arrows
+		    navigation: {
+		    	nextEl: '.viewedSlider-next',
+		    	prevEl: '.viewedSlider-prev',
+		    },
+		    breakpoints: {
+			    // when window width is >= 480px
+			    960: {
+			    	slidesPerView: 3,
+			    },
+			    // when window width is >= 640px
+			    1200: {
+			    	slidesPerView: 4,
+			    }
+			}
+		})
 	}
 
 	if ($(window).width() < 1050) {
@@ -201,6 +250,33 @@ jQuery(document).ready(function($) {
         var $text = ($(this).text() == "Показать все" ? "Скрыть" : "Показать все");
         $(this).text($text).parents(".gabarites").find('.hider').toggle();
     });
+
+    $(document).on('click', '.benefLink', function(event) {
+		event.preventDefault();
+
+		if (!$(this).hasClass('active')) {
+			$('.benefLink').removeClass('active');
+			$(this).addClass('active');
+			$('.benefitsDescr').slideUp();
+			$($(this).attr('data-href')).slideDown();
+			$('.closeBenefit').css('display', 'block');
+			$('.benefitsWrap').addClass('active');
+		} else {
+			$('.benefLink').removeClass('active');
+			$('.benefitsDescr').slideUp();
+			$('.closeBenefit').hide();
+			$('.benefitsWrap').removeClass('active');
+		}
+		
+	});
+	$('.closeBenefit').click(function(event) {
+		$('.benefLink').removeClass('active');
+		event.preventDefault();
+		$('.benefitsDescr').slideUp();
+		$(this).hide();
+		$('.benefitsWrap').removeClass('active');
+		
+	});
 
 
 

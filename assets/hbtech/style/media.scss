@@ -1,3 +1,13 @@
+@media (max-width: 1500px) {
+	.garantiyaSection {
+		font-size: 27px;
+
+		.btn {
+			font-size: 20px;
+			height: 55px;
+		}
+	}
+}
 @media (max-width: 1390px) {
 	.menuCallMe {
 		padding: 10px;
@@ -17,6 +27,12 @@
 			max-width: 60px;
 		}
 	}
+	.garantiyaSection {
+
+		.text {
+			margin-left: 15px;
+		}
+	}
 }
 
 @media (max-width: 1310px) {
@@ -28,6 +44,22 @@
 	}
 	.reliabilityWrap {
 		padding: 35px 0;
+	}
+	.garantiyaSection {
+		font-size: 16px;
+
+		.img {
+			width: 50px;
+		}
+		.text {
+
+			span {
+			}
+		}
+		.btn {
+			height: auto;
+			font-size: 16px;
+		}
 	}
 }
 
@@ -403,9 +435,16 @@
 		margin-right: -30px;
 		width: calc(100% + 60px);
 
-		.uk-slider-items {
+		ul {
+			flex-wrap: nowrap;
 			overflow-x: auto;
 			margin-left: 0;
+		}
+		li {
+			flex: none;
+			&:before {
+				display: none;
+			}
 		}
 	}
 	.footerContacts {
@@ -420,6 +459,46 @@
 	.projectItem {
 		.actionsWrap {
 			top: 0;
+		}
+	}
+	.garantiyaSection {
+		font-size: 22px;
+		flex-direction: column;
+
+		.img {
+			width: auto;
+		}
+		.text {
+
+			span {
+			}
+		}
+		.btn {
+
+		}
+	}
+	.projectsSlider, .viewedSlider {
+		overflow: visible;
+
+		.swiper-wrapper {
+			overflow-x: scroll;
+			margin-left: -15px;
+			width: calc(100% + 30px);
+
+			> div {
+				width: 415px;
+				padding: 0 15px;
+			}
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.companyInNumbers {
+		display: block;
+
+		.img {
+			margin-bottom: 30px;
 		}
 	}
 }
@@ -438,13 +517,6 @@
 		.uk-slider-items {
 			overflow-x: scroll;
 			padding-bottom: 20px;
-		}
-	}
-	.companyInNumbers {
-		flex-direction: column;
-
-		.img {
-			margin-bottom: 30px;
 		}
 	}
 	.reliabilityWrap {
@@ -467,6 +539,7 @@
 	}
 	.footerMenu {
 		> li {
+			padding-left: 0;
 			&:before {
 				display: none;
 			}
@@ -515,6 +588,40 @@
 	#callMe {
 		.h1 {
 			font-size: 1.5em;
+		}
+	}
+	.garantiyaSection {
+		font-size: 22px;
+		flex-direction: column;
+		text-align: center;
+		
+		.textWrap {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-bottom: 20px;
+		}
+		.img {
+			width: auto;
+			margin-bottom: 20px;
+		}
+		.text {
+
+			span {
+
+			}
+		}
+		.btn {
+
+		}
+	}
+	.projectsSlider, .viewedSlider {
+
+		.swiper-wrapper {
+
+			> div {
+				width: 320px;
+			}
 		}
 	}
 }
