@@ -8689,6 +8689,15 @@ p a {
   [type="reset"]:hover {
     border-bottom-color: #969696; }
 
+a.h4 {
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+  transition: all .3s; }
+  a.h4:hover {
+    color: #000;
+    text-decoration: none;
+    border-bottom-color: #000; }
+
 header {
   background: #414C5A;
   padding: 20px 0 30px; }
@@ -9828,6 +9837,24 @@ footer {
   -ms-flex: none;
       flex: none; }
 
+.alreadyBuild {
+  background: #F5F5F5 url("../img/moscowRegionMap.svg") center no-repeat;
+  padding: 40px 40px; }
+  .alreadyBuild span {
+    color: #FCB317; }
+
+.objectStatus {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 12px;
+  display: inline-block;
+  padding: 5px 10px 5px 25px; }
+  .objectStatus.build {
+    background: #FCB317 url("../img/hammer.svg") 10px center no-repeat; }
+  .objectStatus.builded {
+    background: #00AE5D url("../img/builded.svg") 10px center no-repeat; }
+
 @media (max-width: 1500px) {
   .garantiyaSection {
     font-size: 27px; }
@@ -10164,7 +10191,11 @@ footer {
       width: calc(100% + 30px); }
       .projectsSlider .swiper-wrapper > div, .viewedSlider .swiper-wrapper > div {
         width: 415px;
-        padding: 0 15px; } }
+        padding: 0 15px; }
+  .alreadyBuild {
+    text-align: center;
+    -ms-flex-pack: center;
+        justify-content: center; } }
 
 @media (max-width: 800px) {
   .companyInNumbers {
@@ -10245,7 +10276,9 @@ footer {
       width: auto;
       margin-bottom: 20px; }
   .projectsSlider .swiper-wrapper > div, .viewedSlider .swiper-wrapper > div {
-    width: 320px; } }
+    width: 320px; }
+  .alreadyBuild {
+    padding: 20px; } }
 
 @media (max-width: 400px) {
   .whyWrap > *, .kindOfWorkWrap > * {

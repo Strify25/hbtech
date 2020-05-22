@@ -288,139 +288,148 @@ jQuery(document).ready(function($) {
 
 
 
+	if ($('#square').length > 0) {
+		var html5Slider = document.getElementById('square');
+		noUiSlider.create(html5Slider, {
+		    start: [10, 30],
+		    connect: true,
+		    range: {
+		        'min': 0,
+		        'max': 30
+		    }
+		});
+		var inputNumber = document.getElementById('input-number');
+		var inputNumber2 = document.getElementById('input-number2');
+		html5Slider.noUiSlider.on('update', function (values, handle) {
 
-	var html5Slider = document.getElementById('square');
-	noUiSlider.create(html5Slider, {
-	    start: [10, 30],
-	    connect: true,
-	    range: {
-	        'min': 0,
-	        'max': 30
-	    }
-	});
-	var inputNumber = document.getElementById('input-number');
-	var inputNumber2 = document.getElementById('input-number2');
-	html5Slider.noUiSlider.on('update', function (values, handle) {
+		    var value = values[handle];
 
-	    var value = values[handle];
+		    inputNumber.value = values[0];
+		    inputNumber2.value = values[1];
+		});
+		inputNumber.addEventListener('change', function () {
+		    html5Slider.noUiSlider.set([null, this.value]);
+		});
+	}
 
-	    inputNumber.value = values[0];
-	    inputNumber2.value = values[1];
-	});
-	inputNumber.addEventListener('change', function () {
-	    html5Slider.noUiSlider.set([null, this.value]);
-	});
+	if ($('#lengthHouse').length > 0) {
+		var lengthHouse = document.getElementById('lengthHouse');
+		noUiSlider.create(lengthHouse, {
+		    start: [10, 30],
+		    connect: true,
+		    range: {
+		        'min': 0,
+		        'max': 30
+		    }
+		});
+		var inputlengthHouse = document.getElementById('input-lengthHouse');
+		var inputlengthHouse2 = document.getElementById('input-lengthHouse2');
+		lengthHouse.noUiSlider.on('update', function (values, handle) {
 
-	var lengthHouse = document.getElementById('lengthHouse');
-	noUiSlider.create(lengthHouse, {
-	    start: [10, 30],
-	    connect: true,
-	    range: {
-	        'min': 0,
-	        'max': 30
-	    }
-	});
-	var inputlengthHouse = document.getElementById('input-lengthHouse');
-	var inputlengthHouse2 = document.getElementById('input-lengthHouse2');
-	lengthHouse.noUiSlider.on('update', function (values, handle) {
+		    var value = values[handle];
 
-	    var value = values[handle];
-
-	    inputlengthHouse.value = values[0];
-	    inputlengthHouse2.value = values[1];
-	});
-	inputNumber.addEventListener('change', function () {
-	    lengthHouse.noUiSlider.set([null, this.value]);
-	});
-
+		    inputlengthHouse.value = values[0];
+		    inputlengthHouse2.value = values[1];
+		});
+		inputNumber.addEventListener('change', function () {
+		    lengthHouse.noUiSlider.set([null, this.value]);
+		});
+	}
 	
-	var widthHouse = document.getElementById('widthHouse');
-	noUiSlider.create(widthHouse, {
-	    start: [10, 30],
-	    connect: true,
-	    range: {
-	        'min': 0,
-	        'max': 30
-	    }
-	});
-	var inputwidthHouse = document.getElementById('input-widthHouse');
-	var inputwidthHouse2 = document.getElementById('input-widthHouse2');
-	widthHouse.noUiSlider.on('update', function (values, handle) {
+	if ($('#widthHouse').length > 0) {
+		var widthHouse = document.getElementById('widthHouse');
+		noUiSlider.create(widthHouse, {
+		    start: [10, 30],
+		    connect: true,
+		    range: {
+		        'min': 0,
+		        'max': 30
+		    }
+		});
+		var inputwidthHouse = document.getElementById('input-widthHouse');
+		var inputwidthHouse2 = document.getElementById('input-widthHouse2');
+		widthHouse.noUiSlider.on('update', function (values, handle) {
 
-	    var value = values[handle];
+		    var value = values[handle];
 
-	    inputwidthHouse.value = values[0];
-	    inputwidthHouse2.value = values[1];
-	});
-	inputNumber.addEventListener('change', function () {
-	    widthHouse.noUiSlider.set([null, this.value]);
-	});
+		    inputwidthHouse.value = values[0];
+		    inputwidthHouse2.value = values[1];
+		});
+		inputNumber.addEventListener('change', function () {
+		    widthHouse.noUiSlider.set([null, this.value]);
+		});
+	}
 
-	var html5SliderMobile = document.getElementById('squareMobile');
-	noUiSlider.create(html5SliderMobile, {
-	    start: [10, 30],
-	    connect: true,
-	    range: {
-	        'min': 0,
-	        'max': 30
-	    }
-	});
-	var inputNumberMobile = document.getElementById('input-numberMobile');
-	var inputNumber2Mobile = document.getElementById('input-number2Mobile');
-	html5SliderMobile.noUiSlider.on('update', function (values, handle) {
+	if ($('#squareMobile').length > 0) {
+		var html5SliderMobile = document.getElementById('squareMobile');
+		noUiSlider.create(html5SliderMobile, {
+		    start: [10, 30],
+		    connect: true,
+		    range: {
+		        'min': 0,
+		        'max': 30
+		    }
+		});
+		var inputNumberMobile = document.getElementById('input-numberMobile');
+		var inputNumber2Mobile = document.getElementById('input-number2Mobile');
+		html5SliderMobile.noUiSlider.on('update', function (values, handle) {
 
-	    var value = values[handle];
+		    var value = values[handle];
 
-	    inputNumberMobile.value = values[0];
-	    inputNumber2Mobile.value = values[1];
-	});
-	inputNumberMobile.addEventListener('change', function () {
-	    html5SliderMobile.noUiSlider.set([null, this.value]);
-	});
+		    inputNumberMobile.value = values[0];
+		    inputNumber2Mobile.value = values[1];
+		});
+		inputNumberMobile.addEventListener('change', function () {
+		    html5SliderMobile.noUiSlider.set([null, this.value]);
+		});
+	}
 
-	var lengthHouseMobile = document.getElementById('lengthHouseMobile');
-	noUiSlider.create(lengthHouseMobile, {
-	    start: [10, 30],
-	    connect: true,
-	    range: {
-	        'min': 0,
-	        'max': 30
-	    }
-	});
-	var inputlengthHouseMobile = document.getElementById('input-lengthHouseMobile');
-	var inputlengthHouse2Mobile = document.getElementById('input-lengthHouse2Mobile');
-	lengthHouseMobile.noUiSlider.on('update', function (values, handle) {
+	if ($('#lengthHouseMobile').length > 0) {
+		var lengthHouseMobile = document.getElementById('lengthHouseMobile');
+		noUiSlider.create(lengthHouseMobile, {
+		    start: [10, 30],
+		    connect: true,
+		    range: {
+		        'min': 0,
+		        'max': 30
+		    }
+		});
+		var inputlengthHouseMobile = document.getElementById('input-lengthHouseMobile');
+		var inputlengthHouse2Mobile = document.getElementById('input-lengthHouse2Mobile');
+		lengthHouseMobile.noUiSlider.on('update', function (values, handle) {
 
-	    var value = values[handle];
+		    var value = values[handle];
 
-	    inputlengthHouseMobile.value = values[0];
-	    inputlengthHouse2Mobile.value = values[1];
-	});
-	inputNumberMobile.addEventListener('change', function () {
-	    lengthHouseMobile.noUiSlider.set([null, this.value]);
-	});
-
+		    inputlengthHouseMobile.value = values[0];
+		    inputlengthHouse2Mobile.value = values[1];
+		});
+		inputNumberMobile.addEventListener('change', function () {
+		    lengthHouseMobile.noUiSlider.set([null, this.value]);
+		});
+	}
 	
-	var widthHouseMobile = document.getElementById('widthHouseMobile');
-	noUiSlider.create(widthHouseMobile, {
-	    start: [10, 30],
-	    connect: true,
-	    range: {
-	        'min': 0,
-	        'max': 30
-	    }
-	});
-	var inputwidthHouseMobile = document.getElementById('input-widthHouseMobile');
-	var inputwidthHouse2Mobile = document.getElementById('input-widthHouse2Mobile');
-	widthHouse.noUiSlider.on('update', function (values, handle) {
+	if ($('#widthHouseMobile').length > 0) {
+		var widthHouseMobile = document.getElementById('widthHouseMobile');
+		noUiSlider.create(widthHouseMobile, {
+		    start: [10, 30],
+		    connect: true,
+		    range: {
+		        'min': 0,
+		        'max': 30
+		    }
+		});
+		var inputwidthHouseMobile = document.getElementById('input-widthHouseMobile');
+		var inputwidthHouse2Mobile = document.getElementById('input-widthHouse2Mobile');
+		widthHouseMobile.noUiSlider.on('update', function (values, handle) {
 
-	    var value = values[handle];
+		    var value = values[handle];
 
-	    inputwidthHouseMobile.value = values[0];
-	    inputwidthHouse2Mobile.value = values[1];
-	});
-	inputNumberMobile.addEventListener('change', function () {
-	    widthHouseMobile.noUiSlider.set([null, this.value]);
-	});
+		    inputwidthHouseMobile.value = values[0];
+		    inputwidthHouse2Mobile.value = values[1];
+		});
+		inputNumberMobile.addEventListener('change', function () {
+		    widthHouseMobile.noUiSlider.set([null, this.value]);
+		});
+	}
 	
 });

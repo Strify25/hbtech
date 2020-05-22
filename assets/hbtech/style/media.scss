@@ -491,6 +491,10 @@
 			}
 		}
 	}
+	.alreadyBuild {
+		text-align: center;
+		justify-content: center;
+	}
 }
 
 @media (max-width: 800px) {
@@ -623,6 +627,9 @@
 				width: 320px;
 			}
 		}
+	}
+	.alreadyBuild {
+		padding: 20px;
 	}
 }
 

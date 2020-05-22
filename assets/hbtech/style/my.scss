@@ -1441,3 +1441,28 @@ footer {
 		flex: none;
 	}
 }
+
+.alreadyBuild {
+	background: $grayLight url("../img/moscowRegionMap.svg") center no-repeat;
+	padding: 40px 40px;
+
+	span {
+		color: $yellow;
+	}
+}
+
+.objectStatus {
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bolder;
+	font-size: 12px;
+	display: inline-block;
+	padding: 5px 10px 5px 25px;
+
+	&.build {
+		background: $yellow url("../img/hammer.svg") 10px center no-repeat;
+	}
+	&.builded {
+		background: $green url("../img/builded.svg") 10px center no-repeat;
+	}
+}
