@@ -279,7 +279,36 @@ jQuery(document).ready(function($) {
 	});
 
 
+	document.addEventListener('DOMContentLoaded', function(){ // Аналог $(document).ready(function(){
+		var  props = document.querySelectorAll('.projectItem');
+		props.forEach(function(e){
+			e.querySelectorAll('.prop').forEach(function(item,index){
+				item.onmouseover  = function(ev){        
+					toggleActiveProp(index,true);
+				}
+				item.onmouseout   = function(ev){
+					toggleActiveProp(index,false);
+				}
 
+			})
+		})
+	});
+
+	function toggleActiveProp(indexItem,action){
+		var el = document.querySelectorAll('.projectItem')
+		var els=[];
+
+		if(action){
+			el.forEach(function(item,index){
+				item.querySelectorAll('.prop')[indexItem].classList.add('active');
+			})
+		}else{
+			el.forEach(function(item,index){
+				item.querySelectorAll('.prop')[indexItem].classList.remove('active');
+			})
+		}
+
+	}
 
 
 

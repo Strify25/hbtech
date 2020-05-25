@@ -15951,6 +15951,37 @@ footer {
       text-decoration: none; }
       .leftMenu li a:hover:before {
         background: #FCB317; }
+  .leftMenu li.active a {
+    color: #969696; }
+    .leftMenu li.active a:before {
+      background: #FCB317; }
+
+.numberBenefit {
+  font-weight: bold;
+  font-size: 2.25em;
+  color: #FCB317; }
+
+.newsItem {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #F5F5F5; }
+  .newsItem img {
+    width: 100%; }
+  .newsItem .newsItemDate {
+    color: #969696;
+    font-size: 14px;
+    margin-bottom: 10px; }
+    .newsItem .newsItemDate .uk-icon {
+      margin-right: 5px;
+      font-size: 16px; }
+  .newsItem .newsItemTitle {
+    color: #000;
+    border-bottom: 1px solid transparent;
+    transition: all .3s; }
+    .newsItem .newsItemTitle:hover {
+      text-decoration: none;
+      color: #000;
+      border-bottom-color: #000; }
 
 @media (max-width: 1500px) {
   .garantiyaSection {

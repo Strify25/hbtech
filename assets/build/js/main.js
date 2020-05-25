@@ -10903,7 +10903,7 @@ return jQuery;
         "bold": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M5,15.3 C5.66,15.3 5.9,15 5.9,14.53 L5.9,5.5 C5.9,4.92 5.56,4.7 5,4.7 L5,4 L8.95,4 C12.6,4 13.7,5.37 13.7,6.9 C13.7,7.87 13.14,9.17 10.86,9.59 L10.86,9.7 C13.25,9.86 14.29,11.28 14.3,12.54 C14.3,14.47 12.94,16 9,16 L5,16 L5,15.3 Z M9,9.3 C11.19,9.3 11.8,8.5 11.85,7 C11.85,5.65 11.3,4.8 9,4.8 L7.67,4.8 L7.67,9.3 L9,9.3 Z M9.185,15.22 C11.97,15 12.39,14 12.4,12.58 C12.4,11.15 11.39,10 9,10 L7.67,10 L7.67,15 L9.18,15 Z\"/></svg>",
         "bolt": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M4.74,20 L7.73,12 L3,12 L15.43,1 L12.32,9 L17.02,9 L4.74,20 L4.74,20 L4.74,20 Z M9.18,11 L7.1,16.39 L14.47,10 L10.86,10 L12.99,4.67 L5.61,11 L9.18,11 L9.18,11 L9.18,11 Z\"/></svg>",
         "bookmark": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><polygon fill=\"none\" stroke=\"#000\" points=\"5.5 1.5 15.5 1.5 15.5 17.5 10.5 12.5 5.5 17.5\"/></svg>",
-        "calendar": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M 2,3 2,17 18,17 18,3 2,3 Z M 17,16 3,16 3,8 17,8 17,16 Z M 17,7 3,7 3,4 17,4 17,7 Z\"/><rect width=\"1\" height=\"3\" x=\"6\" y=\"2\"/><rect width=\"1\" height=\"3\" x=\"13\" y=\"2\"/></svg>",
+        "calendar": "<svg width=\"14\" height=\"13\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><mask id=\"a\" fill=\"#fff\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13 3H1v9h12V3zM0 2v11h14V2H0z\"/></mask><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13 3H1v9h12V3zM0 2v11h14V2H0z\" fill=\"#969696\"/><path d=\"M1 3V2H0v1h1zm12 0h1V2h-1v1zM1 12H0v1h1v-1zm12 0v1h1v-1h-1zM0 2V1h-1v1h1zm0 11h-1v1h1v-1zm14 0v1h1v-1h-1zm0-11h1V1h-1v1zM1 4h12V2H1v2zm1 8V3H0v9h2zm11-1H1v2h12v-2zm-1-8v9h2V3h-2zM0 3h14V1H0v2zm1 10V2h-2v11h2zm13-1H0v2h14v-2zM13 2v11h2V2h-2z\" fill=\"#DDD\" mask=\"url(#a)\"/><path fill=\"#C4C4C4\" stroke=\"#DDD\" d=\"M3.5 5.5h1v1h-1zM3.5 8.5h1v1h-1zM6.5 5.5h1v1h-1zM6.5 8.5h1v1h-1zM9.5 5.5h1v1h-1zM9.5 8.5h1v1h-1z\"/><path fill=\"#C4C4C4\" stroke=\"#DDD\" stroke-width=\".5\" d=\"M3.25.25h.5v3.5h-.5zM10.25.25h.5v3.5h-.5z\"/></svg>",
         "camera": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><circle fill=\"none\" stroke=\"#000\" stroke-width=\"1.1\" cx=\"10\" cy=\"10.8\" r=\"3.8\"/><path fill=\"none\" stroke=\"#000\" d=\"M1,4.5 C0.7,4.5 0.5,4.7 0.5,5 L0.5,17 C0.5,17.3 0.7,17.5 1,17.5 L19,17.5 C19.3,17.5 19.5,17.3 19.5,17 L19.5,5 C19.5,4.7 19.3,4.5 19,4.5 L13.5,4.5 L13.5,2.9 C13.5,2.6 13.3,2.5 13,2.5 L7,2.5 C6.7,2.5 6.5,2.6 6.5,2.9 L6.5,4.5 L1,4.5 L1,4.5 Z\"/></svg>",
         "cart": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"7.3\" cy=\"17.3\" r=\"1.4\"/><circle cx=\"13.3\" cy=\"17.3\" r=\"1.4\"/><polyline fill=\"none\" stroke=\"#000\" points=\"0 2 3.2 4 5.3 12.5 16 12.5 18 6.5 8 6.5\"/></svg>",
         "check": "<svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><polyline fill=\"none\" stroke=\"#000\" stroke-width=\"1.1\" points=\"4,10 8,15 17,4\"/></svg>",
@@ -20054,7 +20054,36 @@ jQuery(document).ready(function($) {
 	});
 
 
+	document.addEventListener('DOMContentLoaded', function(){ // Аналог $(document).ready(function(){
+		var  props = document.querySelectorAll('.projectItem');
+		props.forEach(function(e){
+			e.querySelectorAll('.prop').forEach(function(item,index){
+				item.onmouseover  = function(ev){        
+					toggleActiveProp(index,true);
+				}
+				item.onmouseout   = function(ev){
+					toggleActiveProp(index,false);
+				}
 
+			})
+		})
+	});
+
+	function toggleActiveProp(indexItem,action){
+		var el = document.querySelectorAll('.projectItem')
+		var els=[];
+
+		if(action){
+			el.forEach(function(item,index){
+				item.querySelectorAll('.prop')[indexItem].classList.add('active');
+			})
+		}else{
+			el.forEach(function(item,index){
+				item.querySelectorAll('.prop')[indexItem].classList.remove('active');
+			})
+		}
+
+	}
 
 
 
