@@ -421,6 +421,9 @@ header {
 				color: $yellow;
 			}
 		}
+		&.active {
+			top: 0;
+		}
 	}
 	.imageDots {
 		margin-left: 0;
@@ -513,9 +516,7 @@ header {
 		align-items: center;
 		justify-content: space-between;
 		flex-wrap: wrap;
-		margin: 10px 0 15px;
-		padding-bottom: 10px;
-		border-bottom: 3px solid $grayLight;
+		margin: 10px 0 0;
 
 		div {
 			flex: 0 0 50%;
@@ -525,6 +526,9 @@ header {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		padding-top: 15px;
+		margin-top: 10px;
+		border-top: 3px solid $grayLight;
 	}
 	&:hover {
 		.imageDots {
@@ -1569,4 +1573,46 @@ footer {
 
 #mainOffice {
 	height: 400px;
+}
+
+.favCompWrap {
+	position: fixed;
+	bottom: 0;
+	left: 30px;
+	display: flex;
+	align-items: flex-end;
+	z-index: 999;
+
+	a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 2px 2px 0px 0px;
+		background: $yellow;
+		color: #fff;
+		margin-right: 10px;
+		font-weight: bold;
+		padding: 15px 25px;
+		transition: all .3s;
+
+		&:hover {
+			text-decoration: none;
+			padding-bottom: 30px;
+		}
+	}
+}
+
+.compareProject {
+	overflow-x: auto;
+	padding-bottom: 30px;
+}
+
+.plansCompare {
+	border-top: 1px solid $grayLight;
+	margin-top: 10px;
+
+	p {
+		font-size: 13px;
+		font-weight: bold;
+	}
 }

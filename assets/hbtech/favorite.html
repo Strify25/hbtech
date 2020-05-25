@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    //= template/head.html
+</head>
+<body>
+
+//= template/header.html
+
+<div class="uk-container uk-container-xlarge">
+	<ul class="uk-breadcrumb">
+	    <li><a href="">Главная</a></li>
+	    <li><span>Избранные проекты</span></li>
+	</ul>
+	<h1>Избранные проекты</h1>
+    <div class="uk-child-width-1-4@m uk-child-width-1-2@s" data-uk-grid>
+        <div>
+            //= template/projectItem.html
+        </div>
+        <div>
+            //= template/projectItem.html
+        </div>
+        <div>
+            //= template/projectItem.html
+        </div>
+        <div>
+            //= template/projectItem.html
+        </div>
+        <div>
+            //= template/projectItem.html
+        </div>
+        <div>
+            //= template/projectItem.html
+        </div>
+    </div>
+</div>
+<div class="favCompWrap">
+    <a href="" class="favoriteBtn">
+        <span data-uk-icon="star-without-shadow" class="mr-10"></span>
+        <span class="text uk-visible@s">Избранное <span class="favoriteCount">(6)</span></span>
+        <span class="favoriteCount uk-hidden@s">6</span>
+    </a>
+    <a href="" class="compareBtn">
+        <span data-uk-icon="compare-without-shadow" class="mr-10"></span>
+        <span class="text uk-visible@s">Сравнение <span class="favoriteCount">(6)</span></span>
+        <span class="favoriteCount uk-hidden@s">6</span>
+    </a>
+</div>
+//= template/footer.html
+</body>
+</html>

@@ -20061,8 +20061,6 @@ jQuery(document).ready(function($) {
 
 
 
-
-
 	if ($('#square').length > 0) {
 		var html5Slider = document.getElementById('square');
 		noUiSlider.create(html5Slider, {

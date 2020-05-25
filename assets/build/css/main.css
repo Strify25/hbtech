@@ -14977,6 +14977,8 @@ header {
     border: none; }
     .projectItem .actionsWrap a.active, .projectItem .actionsWrap a:hover {
       color: #FCB317; }
+  .projectItem .actionsWrap.active {
+    top: 0; }
 
 .projectItem .imageDots {
   margin-left: 0;
@@ -15058,9 +15060,7 @@ header {
       justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 10px 0 15px;
-  padding-bottom: 10px;
-  border-bottom: 3px solid #F5F5F5; }
+  margin: 10px 0 0; }
   .projectItem .priceBlock div {
     -ms-flex: 0 0 50%;
         flex: 0 0 50%; }
@@ -15071,7 +15071,10 @@ header {
   -ms-flex-align: center;
       align-items: center;
   -ms-flex-pack: justify;
-      justify-content: space-between; }
+      justify-content: space-between;
+  padding-top: 15px;
+  margin-top: 10px;
+  border-top: 3px solid #F5F5F5; }
 
 .projectItem:hover .imageDots li a:after {
   opacity: 1; }
@@ -15881,6 +15884,44 @@ footer {
 #mainOffice {
   height: 400px; }
 
+.favCompWrap {
+  position: fixed;
+  bottom: 0;
+  left: 30px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: end;
+      align-items: flex-end;
+  z-index: 999; }
+  .favCompWrap a {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    border-radius: 2px 2px 0px 0px;
+    background: #FCB317;
+    color: #fff;
+    margin-right: 10px;
+    font-weight: bold;
+    padding: 15px 25px;
+    transition: all .3s; }
+    .favCompWrap a:hover {
+      text-decoration: none;
+      padding-bottom: 30px; }
+
+.compareProject {
+  overflow-x: auto;
+  padding-bottom: 30px; }
+
+.plansCompare {
+  border-top: 1px solid #F5F5F5;
+  margin-top: 10px; }
+  .plansCompare p {
+    font-size: 13px;
+    font-weight: bold; }
+
 @media (max-width: 1500px) {
   .garantiyaSection {
     font-size: 27px; }
@@ -16308,7 +16349,9 @@ footer {
   .projectsSlider .swiper-wrapper > div, .viewedSlider .swiper-wrapper > div {
     width: 320px; }
   .alreadyBuild {
-    padding: 20px; } }
+    padding: 20px; }
+  .favCompWrap a {
+    padding: 10px; } }
 
 @media (max-width: 400px) {
   .whyWrap > *, .kindOfWorkWrap > * {
