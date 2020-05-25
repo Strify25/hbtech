@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    //= template/head.html
+</head>
+<body>
+
+//= template/header.html
+
+<div class="uk-container uk-container-xlarge">
+	<ul class="uk-breadcrumb">
+	    <li><a href="">Главная</a></li>
+	    <li><span>Контакты</span></li>
+	</ul>
+	<h1>Контакты</h1>
+	<p>Обратитесь к нашим специалистам и получите профессиональную консультацию по строительству и проектированию Вашего будущего дома.</p>
+    <p>Вы можете связаться с нами по телефону, по электронной почте, через он-лайн формы на сайте и договориться о встрече в нашем офисе. Будем рады помочь вам и ответить на все ваши вопросы.</p>
+    <div class="uk-child-width-1-2@s mt-60" data-uk-grid>
+        <div>
+            <p class="uk-text-bold colorBlack mb-0">Телефон</p>
+            <a href="tel:84952330070" class="contactsPhone">8-495-233-00-70</a>
+            <div class="contactsWatsapp">
+                <a href="">
+                    <span data-uk-icon="whatsapp" class="uk-icon"></span><span class="text">WhatsApp</span>
+                </a>
+            </div>
+        </div>
+        <div>
+            <p class="uk-text-bold colorBlack mb-0">Режим работы</p>
+            <p>Пн.-Вс. 9:00–18:00</p>
+        </div>
+        <div>
+            <p class="uk-text-bold colorBlack mb-0">Электронная почта</p>
+            <p>
+                <a href="mailto:mail@hbtech.ru">mail@hbtech.ru</a>
+            </p>
+        </div>
+        <div>
+            <p class="uk-text-bold colorBlack mb-0">Мы в социальных сетях</p>
+            <div class="contactsSocials mt-10">
+                <a href="" class="uk-icon-link" data-uk-icon="vk"></a>
+                <a href="" class="uk-icon-link" data-uk-icon="instagram"></a>
+                <a href="" class="uk-icon-link" data-uk-icon="youtube"></a>
+                <a href="" class="uk-icon-link" data-uk-icon="facebook"></a>
+            </div>
+        </div>
+    </div>
+    <h2>Адрес</h2>
+    <div class="uk-child-width-1-2@s" data-uk-grid>
+        <div>
+            <p class="uk-text-bold colorBlack mb-0">Головной офис:</p>
+            <p>Московская обл., г. Мытищи, Ярославское шоссе, стр. 1, вл. 1, офис 302</p>
+        </div>
+        <div>
+            <p class="uk-text-bold colorBlack mb-0">Технический офис:</p>
+            <p>Москва, Ярославское шоссе, 120 б, стр. 3</p>
+        </div>
+        <div>
+            <p class="uk-text-bold colorBlack mb-0">Координаты для навигатора: </p>
+            <p>55.885701, 37.730167</p>
+        </div>
+    </div>
+    <h2>Схема проезда</h2>
+    <div class="uk-child-width-1-2@s" data-uk-grid>
+        <div>
+            <p class="uk-text-bold colorBlack">Фото головного офиса</p>
+            <img src="#" data-src="img/mainOffice.jpg" alt="" data-uk-img="">
+        </div>
+        <div>
+            <p class="uk-text-bold colorBlack">Схема </p>
+            <img src="#" data-src="img/schema.svg" alt="" data-uk-img="">
+        </div>
+    </div>
+    <p class="uk-text-bold colorBlack mt-60 mb-10">Головной офис на карте</p>
+</div>
+<div id="mainOffice"></div>
+//= template/footer.html
+<script>
+    if ($("#mainOffice").length) {
+        $.getScript('https://api-maps.yandex.ru/2.1/?apikey=fd86bdb2-fc2e-4b01-8354-e18f8f7fdf5b&lang=ru_RU')
+            .done(() => ymaps.ready(init));
+
+        function init() {
+            var myMap = new ymaps.Map(
+                    "mainOffice", {
+                        center: [55.885701, 37.730167],
+                        zoom: 15,
+                        controls: ['zoomControl']
+                    }, {}
+                ),
+                // Создаём макет содержимого.
+                MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                    '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+                ),
+                myPlacemark = new ymaps.Placemark(
+                    myMap.getCenter(), {
+                        hintContent: "Головной офис",
+                        balloonContent: "Московская обл., г. Мытищи, Ярославское шоссе, стр. 1, вл. 1, офис 302"
+                    }, {
+                        // Опции.
+                        // Необходимо указать данный тип макета.
+                        iconLayout: "default#image",
+                        // Своё изображение иконки метки.
+                        iconImageHref: "/img/mapPointer.svg",
+                        // Размеры метки.
+                        iconImageSize: [30, 42],
+                        // Смещение левого верхнего угла иконки относительно
+                        // её "ножки" (точки привязки).
+                        iconImageOffset: [-5, -38]
+                    }
+                );
+            myMap.behaviors.disable('scrollZoom');
+            myMap.geoObjects.add(myPlacemark);
+        }
+    }
+</script>
+<style>
+    footer {
+        margin-top: 0px;
+    }
+</style>
+</body>
+</html>

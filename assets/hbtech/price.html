@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    //= template/head.html
+</head>
+<body>
+
+//= template/header.html
+
+<div class="uk-container uk-container-xlarge">
+	<ul class="uk-breadcrumb">
+	    <li><a href="">Главная</a></li>
+	    <li><span>Стоимость строительства</span></li>
+	</ul>
+	<h1>Стоимость строительства</h1>
+    <h2 class="mt-0">Описание предварительного ценового предложения</h2>
+    <p>Параметры коттеджа для расчёта стоимости:</p>
+    <ul>
+        <li>габаритные размеры 10х10 м,</li>
+        <li>высота цоколя фундамента 60 см от уровня земли в нижней точке,</li>
+        <li>высота первого этажа от чернового пола до чернового потолка 2,75 м,</li>
+        <li>для коттеджей с мансардным этажом применена двухскатная кровля, минимальная высота стены от 1,5 м,</li>
+        <li>для 2-х этажных коттеджей применена вальмовая кровля (4-х скатная) и высота 2-го этажа 2,75 м.</li>
+        <li>габариты для гаража посчитаны из размеров 4х8 м.</li>
+    </ul>
+    <h2>Выберите интересующий вас тип коттеджа</h2>
+    <div class="uk-child-width-1-5@m uk-child-width-1-2@s" data-uk-grid>
+        <div>
+            <a href="#one" class="typeWrap" data-uk-scroll="offset: 30">
+                <span class="img">
+                    <img src="#" data-src="img/price/one.jpg" alt="" data-uk-img="">
+                </span>
+                <span class="h4 mt-0">Одноэтажный дом</span>
+            </a>
+        </div>
+        <div>
+            <a href="#one-mans" class="typeWrap" data-uk-scroll="offset: 30">
+                <span class="img">
+                    <img src="#" data-src="img/price/one-mans.jpg" alt="" data-uk-img="">
+                </span>
+                <span class="h4 mt-0">Одноэтажный дом <br>+ мансарда</span>
+            </a>
+        </div>
+        <div>
+            <a href="#one-mans-garaj" class="typeWrap" data-uk-scroll="offset: 30">
+                <span class="img">
+                    <img src="#" data-src="img/price/one-mans-garaj.jpg" alt="" data-uk-img="">
+                </span>
+                <span class="h4 mt-0">Одноэтажный дом <br>+ мансарда + гараж</span>
+            </a>
+        </div>
+        <div>
+            <a href="#two" class="typeWrap" data-uk-scroll="offset: 30">
+                <span class="img">
+                    <img src="#" data-src="img/price/two.jpg" alt="" data-uk-img="">
+                </span>
+                <span class="h4 mt-0">Двухэтажный дом <br>+ чердак</span>
+            </a>
+        </div>
+        <div>
+            <a href="#two-mans" class="typeWrap" data-uk-scroll="offset: 30">
+                <span class="img">
+                    <img src="#" data-src="img/price/two-mans.jpg" alt="" data-uk-img="">
+                </span>
+                <span class="h4 mt-0">Двухэтажный дом <br>+ чердак + гараж</span>
+            </a>
+        </div>
+    </div>
+    <h2>Сравнительная таблица комплектаций и характеристик</h2>
+    <div id="one" class="uk-flex-right@m uk-position-relative" data-uk-grid>
+        <div class="uk-width-1-2@m priceHouseTitle">
+            <div class="h2">Одноэтажный дом</div>
+        </div>
+        <div class="uk-width-2-3@m">
+            <picture>
+                <source srcset="img/price/odnoetajnyy.webp" type="image/webp">
+                <img src="#" data-src="img/price/odnoetajnyy.jpg" alt="" data-uk-img>
+            </picture>
+        </div>
+    </div>
+    <table class="uk-table bordered uk-table-hover priceTable mv-50">
+        <tr>
+            <td>Класс энергоэффективности коттеджа:</td>
+            <td><div class="h4 mv-0">Эконом</div></td>
+            <td><div class="h4 mv-0">Стандарт</div></td>
+            <td><div class="h4 mv-0">Энерго</div></td>
+        </tr>
+        <tr>
+            <td>Стандартная комплектация теплого контура, стоимость 1&nbsp;кв.&nbsp;м:</td>
+            <td><div class="uk-text-bold">20&nbsp;300</div></td>
+            <td><div class="uk-text-bold">22&nbsp;000</div></td>
+            <td><div class="uk-text-bold">23&nbsp;500</div></td>
+        </tr>
+        <tr>
+            <td>Фундамент: ж/б лента на сваях</td>
+            <td colspan="3">Бетон - М300 (В22.5)</td>
+        </tr>
+        <tr>
+            <td>Фундамент: ж/б плита 190 мм, утепление плиты:</td>
+            <td>50 мм</td>
+            <td>50 мм</td>
+            <td>100 мм</td>
+        </tr>
+        <tr>
+            <td>Стены внешние, газобетон:</td>
+            <td>300 мм</td>
+            <td>375/400 мм</td>
+            <td>500 мм</td>
+        </tr>
+        <tr>
+            <td>Стены несущие, газобетон:</td>
+            <td colspan="3">250 мм</td>
+        </tr>
+        <tr>
+            <td>Стены перегородочные, газобетон</td>
+            <td colspan="3">150 мм</td>
+        </tr>
+        <tr>
+            <td>Высота 1-го этажа</td>
+            <td colspan="3">2,75 м</td>
+        </tr>
+        <tr>
+            <td>Перекрытие 1-го этажа: доска 200х50, утепление</td>
+            <td>X</td>
+            <td>200 мм</td>
+            <td>200 мм</td>
+        </tr>
+        <tr>
+            <td>Кровля: перекрытие 2-го этажа: доска 200х50, утепление:</td>
+            <td>150 мм</td>
+            <td>X</td>
+            <td>X</td>
+        </tr>
+        <tr>
+            <td>Кровля: натуральная цементно-песчаная</td>
+            <td colspan="3">BRAAS (Вишня, кор, т-кор, черн, сер)</td>
+        </tr>
+    </table>
+    <div id="one-mans" class="uk-flex-right@m uk-position-relative" data-uk-grid>
+        <div class="uk-width-1-2@m priceHouseTitle">
+            <div class="h2">Одноэтажный дом + мансарда</div>
+        </div>
+        <div class="uk-width-2-3@m">
+            <picture>
+                <source srcset="img/price/odnoetajnyy-mans.webp" type="image/webp">
+                <img src="#" data-src="img/price/odnoetajnyy-mans.jpg" alt="" data-uk-img>
+            </picture>
+        </div>
+    </div>
+    <table class="uk-table bordered uk-table-hover priceTable mv-50 uk-width-1-1">
+        <tr>
+            <td>Класс энергоэффективности коттеджа:</td>
+            <td><div class="h4 mv-0">Эконом</div></td>
+            <td><div class="h4 mv-0">Стандарт</div></td>
+            <td><div class="h4 mv-0">Энерго</div></td>
+        </tr>
+        <tr>
+            <td>Стандартная комплектация теплого контура, стоимость 1&nbsp;кв.&nbsp;м:</td>
+            <td><div class="uk-text-bold">14&nbsp;200</div></td>
+            <td><div class="uk-text-bold">15&nbsp;200</div></td>
+            <td><div class="uk-text-bold">16&nbsp;100</div></td>
+        </tr>
+        <tr>
+            <td>Фундамент: ж/б лента на сваях</td>
+            <td colspan="3">Бетон - М300 (В22.5)</td>
+        </tr>
+        <tr>
+            <td>Фундамент: ж/б плита 190 мм, утепление плиты:</td>
+            <td>50 мм</td>
+            <td>50 мм</td>
+            <td>100 мм</td>
+        </tr>
+        <tr>
+            <td>Стены внешние, газобетон:</td>
+            <td>300 мм</td>
+            <td>375/400 мм</td>
+            <td>500 мм</td>
+        </tr>
+        <tr>
+            <td>Стены несущие, газобетон:</td>
+            <td colspan="3">250 мм</td>
+        </tr>
+        <tr>
+            <td>Стены перегородочные, газобетон</td>
+            <td colspan="3">150 мм</td>
+        </tr>
+        <tr>
+            <td>Высота 1-го этажа</td>
+            <td colspan="3">2,75 м</td>
+        </tr>
+        <tr>
+            <td>Высота стен мансарды</td>
+            <td colspan="3">1,5 м - 3,5 м</td>
+        </tr>
+        <tr>
+            <td>Перекрытие 1-го этажа: ж/б плита 150 мм</td>
+            <td colspan="3">Бетон - М300 (В22.5)</td>
+        </tr>
+        <tr>
+            <td>Кровля: стропильная система: доска 200х50, утепление:</td>
+            <td>150 мм</td>
+            <td>200 мм</td>
+            <td>200 мм</td>
+        </tr>
+        <tr>
+            <td>Кровля: натуральная цементно-песчаная</td>
+            <td colspan="3">BRAAS (Вишня, кор, т-кор, черн, сер)</td>
+        </tr>
+    </table>
+    <div id="one-mans-garaj" class="uk-flex-right@m uk-position-relative" data-uk-grid>
+        <div class="uk-width-1-2@m priceHouseTitle">
+            <div class="h2">Одноэтажный дом + мансарда + гараж</div>
+        </div>
+        <div class="uk-width-2-3@m">
+            <picture>
+                <source srcset="img/price/odnoetajnyy-mans-garaj.webp" type="image/webp">
+                <img src="#" data-src="img/price/odnoetajnyy-mans-garaj.jpg" alt="" data-uk-img>
+            </picture>
+        </div>
+    </div>
+    <table class="uk-table bordered uk-table-hover priceTable mv-50 uk-width-1-1">
+        <tr>
+            <td>Класс энергоэффективности коттеджа:</td>
+            <td><div class="h4 mv-0">Эконом</div></td>
+            <td><div class="h4 mv-0">Стандарт</div></td>
+            <td><div class="h4 mv-0">Энерго</div></td>
+        </tr>
+        <tr>
+            <td>Стандартная комплектация теплого контура, стоимость 1 кв. м:</td>
+            <td><div class="uk-text-bold">15&nbsp;400</div></td>
+            <td><div class="uk-text-bold">16&nbsp;200</div></td>
+            <td><div class="uk-text-bold">17&nbsp;500</div></td>
+        </tr>
+        <tr>
+            <td>Фундамент: ж/б лента на сваях</td>
+            <td colspan="3">Бетон - М300 (В22.5)</td>
+        </tr>
+        <tr>
+            <td>Фундамент: ж/б плита 190 мм, утепление плиты:</td>
+            <td>50 мм</td>
+            <td>50 мм</td>
+            <td>100 мм</td>
+        </tr>
+        <tr>
+            <td>Стены внешние, газобетон:</td>
+            <td>300 мм</td>
+            <td>375/400 мм</td>
+            <td>500 мм</td>
+        </tr>
+        <tr>
+            <td>Стены несущие, газобетон:</td>
+            <td colspan="3">250 мм</td>
+        </tr>
+        <tr>
+            <td>Стены перегородочные, газобетон</td>
+            <td colspan="3">150 мм</td>
+        </tr>
+        <tr>
+            <td>Высота 1-го этажа</td>
+            <td colspan="3">2,75 м</td>
+        </tr>
+        <tr>
+            <td>Высота стен мансарды</td>
+            <td colspan="3">1,5 м - 3,5 м</td>
+        </tr>
+        <tr>
+            <td>Перекрытие 1-го этажа: ж/б плита 150 мм</td>
+            <td colspan="3">Бетон - М300 (В22.5)</td>
+        </tr>
+        <tr>
+            <td>Кровля: стропильная система: доска 200х50, утепление:</td>
+            <td>150 мм</td>
+            <td>200 мм</td>
+            <td>200 мм</td>
+        </tr>
+        <tr>
+            <td>Кровля: натуральная цементно-песчаная</td>
+            <td colspan="3">BRAAS (Вишня, кор, т-кор, черн, сер)</td>
+        </tr>
+    </table>
+    <div id="two" class="uk-flex-right@m uk-position-relative" data-uk-grid>
+        <div class="uk-width-1-2@m priceHouseTitle">
+            <div class="h2">Двухэтажный дом + чердак</div>
+        </div>
+        <div class="uk-width-2-3@m">
+            <picture>
+                <source srcset="img/price/dvuhetajnyy.webp" type="image/webp">
+                <img src="#" data-src="img/price/dvuhetajnyy.jpg" alt="" data-uk-img>
+            </picture>
+        </div>
+    </div>
+    <table class="uk-table bordered uk-table-hover priceTable mv-50 uk-width-1-1">
+        <tr>
+            <td>Класс энергоэффективности коттеджа:</td>
+            <td><div class="h4 mv-0">Эконом</div></td>
+            <td><div class="h4 mv-0">Стандарт</div></td>
+            <td><div class="h4 mv-0">Энерго</div></td>
+        </tr>
+        <tr>
+            <td>Стандартная комплектация теплого контура, стоимость 1&nbsp;кв.&nbsp;м:</td>
+            <td><div class="uk-text-bold">15&nbsp;100</div></td>
+            <td><div class="uk-text-bold">15&nbsp;800</div></td>
+            <td><div class="uk-text-bold">16&nbsp;800</div></td>
+        </tr>
+        <tr>
+            <td>Фундамент: ж/б лента на сваях</td>
+            <td colspan="3">Бетон - М300 (В22.5)</td>
+        </tr>
+        <tr>
+            <td>Фундамент: ж/б плита 190 мм, утепление плиты:</td>
+            <td>50 мм</td>
+            <td>50 мм</td>
+            <td>100 мм</td>
+        </tr>
+        <tr>
+            <td>Стены внешние, газобетон:</td>
+            <td>300 мм</td>
+            <td>375/400 мм</td>
+            <td>500 мм</td>
+        </tr>
+        <tr>
+            <td>Стены несущие, газобетон:</td>
+            <td colspan="3">250 мм</td>
+        </tr>
+        <tr>
+            <td>Стены перегородочные, газобетон</td>
+            <td colspan="3">150 мм</td>
+        </tr>
+        <tr>
+            <td>Высота 1-го этажа</td>
+            <td colspan="3">2,75 м</td>
+        </tr>
+        <tr>
+            <td>Высота 2-го этажа</td>
+            <td colspan="3">2,75 м</td>
+        </tr>
+        <tr>
+            <td>Высота стен мансарды</td>
+            <td colspan="3">1,5 м - 3,5 м</td>
+        </tr>
+        <tr>
+            <td>Перекрытие 1-го этажа: ж/б плита 150 мм</td>
+            <td colspan="3">Бетон - М300 (В22.5)</td>
+        </tr>
+        <tr>
+            <td>Кровля: перекрытие 2-го этажа: доска 200х50, утепление:</td>
+            <td>150 мм</td>
+            <td>200 мм</td>
+            <td>200 мм</td>
+        </tr>
+        <tr>
+            <td>Кровля: натуральная цементно-песчаная</td>
+            <td colspan="3">BRAAS (Вишня, кор, т-кор, черн, сер)</td>
+        </tr>
+    </table>
+    <div id="two-mans" class="uk-flex-right@m uk-position-relative" data-uk-grid>
+        <div class="uk-width-1-2@m priceHouseTitle">
+            <div class="h2">Двухэтажный дом + чердак + гараж</div>
+        </div>
+        <div class="uk-width-2-3@m">
+            <picture>
+                <source srcset="img/price/dvuhetajnyy-garaj.webp" type="image/webp">
+                <img src="#" data-src="img/price/dvuhetajnyy-garaj.jpg" alt="" data-uk-img>
+            </picture>
+        </div>
+    </div>
+    <table class="uk-table bordered uk-table-hover priceTable mv-50 uk-width-1-1">
+        <tr>
+            <td>Класс энергоэффективности коттеджа:</td>
+            <td><div class="h4 mv-0">Эконом</div></td>
+            <td><div class="h4 mv-0">Стандарт</div></td>
+            <td><div class="h4 mv-0">Энерго</div></td>
+        </tr>
+        <tr>
+            <td>Стандартная комплектация теплого контура, стоимость 1&nbsp;кв.&nbsp;м:</td>
+            <td><div class="uk-text-bold">16&nbsp;200</div></td>
+            <td><div class="uk-text-bold">16&nbsp;800</div></td>
+            <td><div class="uk-text-bold">17&nbsp;900</div></td>
+        </tr>
+        <tr>
+            <td>Фундамент: ж/б лента на сваях</td>
+            <td colspan="3">Бетон - М300 (В22.5)</td>
+        </tr>
+        <tr>
+            <td>Фундамент: ж/б плита 190 мм, утепление плиты:</td>
+            <td>50 мм</td>
+            <td>50 мм</td>
+            <td>100 мм</td>
+        </tr>
+        <tr>
+            <td>Стены внешние, газобетон:</td>
+            <td>300 мм</td>
+            <td>375/400 мм</td>
+            <td>500 мм</td>
+        </tr>
+        <tr>
+            <td>Стены несущие, газобетон:</td>
+            <td colspan="3">250 мм</td>
+        </tr>
+        <tr>
+            <td>Стены перегородочные, газобетон</td>
+            <td>150 мм</td>
+        </tr>
+        <tr>
+            <td>Высота 1-го этажа</td>
+            <td colspan="3">2,75 м</td>
+        </tr>
+        <tr>
+            <td>Высота 2-го этажа</td>
+            <td colspan="3">2,75 м</td>
+        </tr>
+        <tr>
+            <td>Высота стен мансарды</td>
+            <td colspan="3">1,5 м - 3,5 м</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="3">Перекрытие 1-го этажа: ж/б плита 150 мм</td>
+        </tr>
+        <tr>
+            <td>Кровля: перекрытие 2-го этажа: доска 200х50, утепление:</td>
+            <td>150 мм</td>
+            <td>200 мм</td>
+            <td>200 мм</td>
+        </tr>
+        <tr>
+            <td>Кровля: натуральная цементно-песчаная</td>
+            <td colspan="3">BRAAS (Вишня, кор, т-кор, черн, сер)</td>
+        </tr>
+    </table>
+    <h2>Класс энергоэффективности коттеджа</h2>
+    <div class="uk-child-width-1-3@m" data-uk-grid>
+        <div>
+            <div class="h4 mv-0">Эконом</div>
+            <p>Комплектация подходит для проживания в период весна-осень, для круглогодичного проживания требует утепления или повышенных расходов на отопление.</p>
+        </div>
+        <div>
+            <div class="h4 mv-0">Стандарт</div>
+            <p>Комплектация подходит для круглогодичного проживания без дополнительного утепления</p>
+        </div>
+        <div>
+            <div class="h4 mv-0">Энерго</div>
+            <p>Комплектация подходит для круглогодичного проживания с пониженными затратами на поддержание тепла.</p>
+        </div>
+    </div>
+    <h2>Описание комплектаций</h2>
+    <p>Наша компания осуществляет строительство по газобетонной технологии. Стоимость для нашего стандартного предложения составляет от <span class="uk-text-bold">14&nbsp;000&nbsp;руб.</span> за квадратный метр площади дома. Предлагаем Вам ознакомиться со стандартной комплектацией:</p>
+    <ul data-uk-accordion="multiple: true">
+        <li>
+            <a class="uk-accordion-title" href="#">Фундамент</a>
+            <div class="uk-accordion-content">
+                <p>Ж/Б буронабивные сваи, диаметр 300 мм, залеганием ниже уровня промерзания земли.*</p>
+                <p>Ж/Б мелкозаглубленная лента 300x600 мм.*</p>
+                <p>Ж/Б плита толщиной 160 мм. С двухслойным армированием арматурой**.</p>
+                <p>Засыпка песком цокольного пространства с послойным трамбованием и проливкой водой</p>
+                <p>Укладка эффективного утеплителя по периметру цоколя и под Ж/Б плиту(экструзия 50мм)</p>
+                <p>Обеспечение ввода коммуникаций.***</p>
+                <br>
+                <p class="gray text-14">*Бетон М-300 (B22.5)</p>
+                <p class="gray text-14">**Арматура АIII 12 мм (может изменяться в зависимости от результатов прочностных расчетов)</p>
+                <p class="gray text-14">***Закладные под коммуникации (вода, канализация, свет)</p>
+            </div>
+        </li>
+        <li>
+            <a class="uk-accordion-title" href="#">Ограждающие конструкции</a>
+            <div class="uk-accordion-content">
+                <p>Несущие внешние стены: газобетонный блок 375 мм*</p>
+                <p>Несущие внутренние стены: газобетонный блок 250-375 мм*</p>
+                <p>Внутренние перегородки: газобетонный блок 100-200 мм*</p>
+                <p>Тонко-шовная кладка на клей для газобетона (толщина шва 1-3 мм)</p>
+                <p>Ж/Б перемычки над оконными и дверными проемами</p>
+                <br>
+                <p class="gray text-14">*Возможно изменение толщины стен по согласованию с Заказчиком</p>
+                <p class="gray text-14">**Марка и производитель газобетонных блоков по согласованию с Заказчиком (Ytong, EL|Block, ГРАС, Aerostone)</p>
+            </div>
+        </li>
+        <li>
+            <a class="uk-accordion-title" href="#">Перекрытия</a>
+            <div class="uk-accordion-content">
+                <p>Ж/Б* плиты толщиной 160 мм. С двухслойным армированием арматурой**.</p>
+                <p>Сборное каркасное перекрытие по двутавровым деревянным балкам с покрытием ЦСП, ОСП, фанера***</p>
+                <br>
+                <p class="gray text-14">*Бетон М-300 (B22.5)</p>
+                <p class="gray text-14">**Арматура АIII 12 мм (может изменяться в зависимости от результатов прочностных расчетов</p>
+                <p class="gray text-14">***Опционально по желанию заказчика</p>
+            </div>
+        </li>
+        <li>
+            <a class="uk-accordion-title" href="#">Кровля</a>
+            <div class="uk-accordion-content">
+                <p>Устройство стропильной системы, монтаж обрешеток*</p>
+                <p>Обеспечение подкровельной вентиляции</p>
+                <p>Утепление минеральной ватой 200мм</p>
+                <p>Паро-гидро-ветро- защитные пленки высокго качества (Tyvek, Juta)</p>
+                <p>Кровельное покрытие металлочерепицей (Финская сталь, гарантия от 15 лет)**</p>
+                <p>Устройство системы снегозадержания***</p>
+                <p>Устройство водосточной системы, подшивка карнизных свесов****</p>
+                <br>
+                <p class="gray text-14">*Используется строганый, обработанный огнебиозащитой пиломатериал</p>
+                <p class="gray text-14">**Опционально: натуральная черепица, мягкая черепица, композитная черепица и прочее.</p>
+                <p class="gray text-14">***Опционально по желанию заказчика</p>
+                <p class="gray text-14">****Оговаривается после отделки фасадов</p>
+            </div>
+        </li>
+        <li>
+            <a class="uk-accordion-title" href="#">Производственно-организационные издержки:</a>
+            <div class="uk-accordion-content">
+                <p>Аренда спец.техники (экскаватор, ямобур, бетононасос, кран)</p>
+                <p>Уборка территории, вывоз строительного мусора по завершении строительства</p>
+                <p>Организация временного проживания рабочих (Бытовка)</p>
+            </div>
+        </li>
+    </ul>
+    <p>Для получения предварительного расчета стоимости строительства любого понравившегося Вам проекта из любого источника, достаточно отправить нам письмо с ссылкой на проект или с приложенным описанием (картинки, наброски от руки, фотографии и т.п.) на нашу почту: <a href="mailto:mail@hbtech.ru">mail@hbtech.ru</a></p>
+</div>
+
+//= template/footer.html
+</body>
+</html>

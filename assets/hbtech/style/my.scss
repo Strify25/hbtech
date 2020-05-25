@@ -1470,3 +1470,103 @@ footer {
 #mapObject {
 	height: 450px;
 }
+
+.typeWrap {
+	transition: all .3s;
+
+	.img {
+		display: block;
+		margin-bottom: 20px;
+		border: 2px solid transparent;
+		transition: all .3s;
+	}
+	.h4 {
+		transition: all .3s;
+	}
+	&:hover {
+		text-decoration: none;
+		color: $yellow;
+
+		.img {
+			border-color: $yellow;
+		}
+		.h4 {
+			color: $yellow;
+		}
+	}
+}
+
+.priceHouseTitle {
+	position: absolute;
+	left: 0;
+	top: 60px;
+
+	.h2 {
+		width: 100%;
+		margin: 0;
+		background: $yellow;
+		padding: 30px;
+		box-sizing: border-box;
+	}
+}
+
+.uk-accordion-title {
+	font-family: "Roboto Condensed", sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	color: #000;
+	text-transform: uppercase;
+	padding: 20px 0;
+	border-top: 1px solid $grayMiddle;
+	margin-bottom: 0;
+
+	&:before {
+		background-image: url("../img/accordionArrow.svg");
+	}
+}
+
+.uk-open {
+	> .uk-accordion-title {
+		&:before {
+			background-image: url("../img/accordionArrowOpen.svg");
+		}
+	}
+}
+
+.uk-accordion-content {
+	padding: 0 30px;
+	margin-bottom: 30px;
+}
+
+.contactsPhone {
+	font-weight: bold;
+	color: #000;
+	font-size: 24px;
+
+	&:hover {
+		text-decoration: none;
+		color: #000;
+	}
+}
+
+.contactsWatsapp {
+	a {
+		color: #0DC143;
+		font-weight: bold;
+
+		.uk-icon {
+			margin-right: 10px;
+		}
+	}
+}
+
+.contactsSocials {
+	a {
+		margin-right: 30px;
+		color: #414C5A;
+	}
+}
+
+#mainOffice {
+	height: 400px;
+}

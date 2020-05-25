@@ -22,6 +22,14 @@ body {
 	font-size: 14px;
 }
 
+.gray {
+	color: $gray;
+}
+
+.colorBlack {
+	color: #000;
+}
+
 h1, .h1 {
 	@include headers();
 	font-size: 2.375em;
@@ -105,11 +113,18 @@ ul {
 			background: $yellow;
 		}
 	}
-	&.uk-slider-items {
+	&.uk-slider-items, &.uk-accordion {
 		>li {
 			&:before {
 				display: none;
 			}
+		}
+	}
+	&.uk-accordion {
+		border-bottom: 1px solid $grayMiddle;
+		li {
+			padding-left: 0;
+			margin: 0 !important;
 		}
 	}
 }
@@ -394,6 +409,26 @@ a {
 			color: #000;
 			text-decoration: none;
 			border-bottom-color: #000;
+		}
+	}
+}
+
+.uk-table {
+	&.bordered {
+		td {
+			border: 1px solid $gray;
+		}
+	}
+
+	&.priceTable {
+		td {
+			width: 21%;
+			text-align: center;
+
+			&:first-child {
+				width: 29%;
+				text-align: left;
+			}
 		}
 	}
 }
