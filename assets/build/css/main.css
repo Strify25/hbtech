@@ -13630,12 +13630,12 @@ ul.uk-accordion {
     margin: 0 !important; }
 
 p a {
-  color: #363636;
-  border-bottom: 1px solid #363636;
+  color: #0079D1;
+  border-bottom: 1px solid #0079D1;
   transition: all .3s; }
   p a:hover {
     text-decoration: none;
-    color: #363636;
+    color: #0079D1;
     border-bottom-color: transparent; }
 
 .p-0,
@@ -14620,6 +14620,37 @@ p a {
     color: #FCB317;
     text-decoration: none; }
 
+.backToList {
+  display: inline-block;
+  padding-left: 25px;
+  font-weight: bold;
+  font-size: 12px;
+  color: #FCB317;
+  position: relative; }
+  .backToList:after {
+    content: "";
+    display: block;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    background: url("../img/withArrow.svg") no-repeat center;
+    width: 19px;
+    height: 8px;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 4px);
+    transition: all .3s; }
+  .backToList span {
+    display: block;
+    border-bottom: 1px solid transparent;
+    transition: all .3s; }
+  .backToList:hover {
+    color: #FCB317;
+    text-decoration: none; }
+    .backToList:hover:after {
+      left: -10px; }
+    .backToList:hover span {
+      border-bottom-color: #FCB317; }
+
 [type="reset"] {
   border: none;
   border-bottom: 1px solid transparent;
@@ -14634,11 +14665,11 @@ p a {
   [type="reset"]:hover {
     border-bottom-color: #969696; }
 
-a.h4 {
+a.h4, a.h3 {
   display: inline-block;
   border-bottom: 1px solid transparent;
   transition: all .3s; }
-  a.h4:hover {
+  a.h4:hover, a.h3:hover {
     color: #000;
     text-decoration: none;
     border-bottom-color: #000; }
@@ -14652,6 +14683,12 @@ a.h4 {
   .uk-table.priceTable td:first-child {
     width: 29%;
     text-align: left; }
+
+.nowrap {
+  white-space: nowrap; }
+
+.yellowColor {
+  color: #FCB317; }
 
 header {
   background: #414C5A;
@@ -15914,6 +15951,10 @@ footer {
 .compareProject {
   overflow-x: auto;
   padding-bottom: 30px; }
+  .compareProject .prop {
+    transition: all .3s; }
+    .compareProject .prop.active {
+      background: #F5F5F5; }
 
 .plansCompare {
   border-top: 1px solid #F5F5F5;
@@ -15967,21 +16008,53 @@ footer {
   border-bottom: 1px solid #F5F5F5; }
   .newsItem img {
     width: 100%; }
-  .newsItem .newsItemDate {
-    color: #969696;
-    font-size: 14px;
-    margin-bottom: 10px; }
-    .newsItem .newsItemDate .uk-icon {
-      margin-right: 5px;
-      font-size: 16px; }
   .newsItem .newsItemTitle {
     color: #000;
     border-bottom: 1px solid transparent;
     transition: all .3s; }
     .newsItem .newsItemTitle:hover {
       text-decoration: none;
-      color: #000;
-      border-bottom-color: #000; }
+      color: #FCB317;
+      border-bottom-color: #FCB317; }
+
+.newsItemDate {
+  color: #969696;
+  font-size: 14px;
+  margin-bottom: 10px; }
+  .newsItemDate .uk-icon {
+    margin-right: 5px;
+    font-size: 16px; }
+
+.testimonialItem {
+  padding-bottom: 60px;
+  margin-bottom: 60px;
+  border-bottom: 1px solid #F5F5F5; }
+
+.clientGallery a {
+  display: block;
+  border: 3px solid transparent;
+  transition: all .3s; }
+  .clientGallery a:hover {
+    border-color: #FCB317; }
+
+.partnerItem {
+  padding-bottom: 60px;
+  margin-bottom: 60px;
+  border-bottom: 1px solid #F5F5F5; }
+
+.offersItem {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #F5F5F5; }
+
+.regionalItem {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #F5F5F5; }
+
+.contents {
+  background: #F5F5F5;
+  padding: 30px; }
 
 @media (max-width: 1500px) {
   .garantiyaSection {

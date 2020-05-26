@@ -1605,6 +1605,14 @@ footer {
 .compareProject {
 	overflow-x: auto;
 	padding-bottom: 30px;
+
+	.prop {
+		transition: all .3s;
+		
+		&.active {
+			background: $grayLight;
+		}
+	}
 }
 
 .plansCompare {
@@ -1682,16 +1690,6 @@ footer {
 	img {
 		width: 100%;
 	}
-	.newsItemDate {
-		color: $gray;
-		font-size: 14px;
-		margin-bottom: 10px;
-
-		.uk-icon {
-			margin-right: 5px;
-			font-size: 16px;
-		}
-	}
 	.newsItemTitle {
 		color: #000;
 		border-bottom: 1px solid transparent;
@@ -1703,4 +1701,55 @@ footer {
 			border-bottom-color: $yellow;
 		}
 	}
+}
+.newsItemDate {
+	color: $gray;
+	font-size: 14px;
+	margin-bottom: 10px;
+
+	.uk-icon {
+		margin-right: 5px;
+		font-size: 16px;
+	}
+}
+
+.testimonialItem {
+	padding-bottom: 60px;
+	margin-bottom: 60px;
+	border-bottom: 1px solid $grayLight;
+}
+
+.clientGallery {
+	a {
+		display: block;
+		border: 3px solid transparent;
+		transition: all .3s;
+
+		&:hover {
+			border-color: $yellow;
+		}
+	}
+}
+
+.partnerItem {
+	padding-bottom: 60px;
+	margin-bottom: 60px;
+	border-bottom: 1px solid $grayLight;
+}
+
+.offersItem {
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid $grayLight;
+}
+
+.regionalItem {
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid $grayLight;
+}
+
+.contents {
+	background: $grayLight;
+	padding: 30px;
 }
